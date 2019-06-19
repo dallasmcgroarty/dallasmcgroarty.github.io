@@ -5,8 +5,12 @@
 #img-links {
     margin-top: -10px;
     padding-right: 60px;
+    margin-bottom: 10px;
 }
 
+.nav-link {
+    font-size: 20px;
+}
 #linkedin {
     height: auto;
     width: 45px;
@@ -15,7 +19,7 @@
 
 #face {
     height: auto;
-    width: 60px;
+    width: 100px;
     margin-top: 10px;
 }
 
