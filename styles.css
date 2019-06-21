@@ -10,6 +10,7 @@
 
 .nav-link {
     font-size: 20px;
+    color: rgb(7, 110, 90)
 }
 
 #linkedin {
@@ -24,6 +25,11 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#about-box, #resume, #project-row, #project-title, #project-link, #project-text {
+    animation-name: slide-down;
+    animation-duration: 0.5s;
 }
 
 #resume {
@@ -51,9 +57,66 @@
     color: white;
 }
 
+#project-image {
+    height: 100%;
+    width: 70%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#project-image:hover {
+    background-color: rgb(129, 241, 144);
+    width: 75%;
+}
+
+#project-row {
+    margin-bottom: 40px;
+}
+
+#project-wrap {
+    margin-bottom: 100px;
+}
+
+#project-wrap #project-title {
+    margin-bottom: 0px;
+    font-size: 50px;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+#project-text {
+    font-weight: bold;
+}
+
+#project-link {
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#project-example {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
 @media screen and (max-width: 768px) {
     .body {
         margin-left: 0px;
         margin-right: 0px;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

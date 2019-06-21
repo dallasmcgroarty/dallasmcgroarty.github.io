@@ -5,6 +5,7 @@
   <title>Dallas McGroarty</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -47,21 +48,26 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">Resume</a>
+            <a class="nav-link" href="resume.html">Resume</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link active" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href=""></a>
         </li>
     </ul>
-    <div class="container" id="down-wrap">
-        <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link">Download Resume</a>
-    </div>
-    <div class="d-flex justify-content-center container" style="flex-direction:column;" id="resume-wrap">
-        <!--<embed src="resume.pdf" id="resume">-->
-        <img src="images/resume.PNG" id="resume">
+    <div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+        <p class="text-center" id="project-title">The Grid Game</p>
+        <a href="https://github.com/dallasmcgroarty/Grid-Game" target="_blank" class="badge badge-info" id="project-link">The Grid Game Github Project</a>
+        <a href="https://dallasmcgroarty.github.io/Grid-Game/" target="_blank" class="badge badge-info" id="project-link">Link to The Grid Game Website</a>
+        <p class="text-center" id="project-text">The Grid Game! Simple grid game created by using html, css, bootstrap, and javascript. 
+            Move boy and girl according to directions on webpage
+        </p>
+        <div class="row" id="project-row">
+            <div class="col text-center">
+                <img src="images/grid-game.PNG" id="project-example">
+            </div>
     </div>
     <footer>
         <p class="d-flex justify-content-center fixed-bottom" style="margin-top: 5px;">&copy; Dallas McGroarty<br />

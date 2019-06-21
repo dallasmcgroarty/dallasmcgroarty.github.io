@@ -5,6 +5,7 @@
   <title>Dallas McGroarty</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -47,21 +48,36 @@
             <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">Resume</a>
+            <a class="nav-link" href="resume.html">Resume</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link active" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href=""></a>
         </li>
     </ul>
-    <div class="container" id="down-wrap">
-        <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link">Download Resume</a>
+    <div class="container" id="">
+        
     </div>
-    <div class="d-flex justify-content-center container" style="flex-direction:column;" id="resume-wrap">
-        <!--<embed src="resume.pdf" id="resume">-->
-        <img src="images/resume.PNG" id="resume">
+    <div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+        <p class="text-center" id="project-title">Contact Form</p>
+        <a href="https://github.com/dallasmcgroarty/ContactForm" target="_blank" class="badge badge-info" id="project-link">Contact Form Github Project</a>
+        <p class="text-center" id="project-text">Contact form made using HTML, Bootstrap and PHP.
+
+                HTML front-end and PHP back-end. The PHP handles the form and inputs the data in a .csv file.
+                
+                Need Apache and PHP installed to run or some other server that can you can run PHP on.</p>
+        <div class="row" id="project-row">
+            <div class="col text-center">
+                <img src="images/contact-form.PNG" id="project-example">
+            </div>
+        </div>
+        <div class="row" id="project-row">
+            <div class="col text-center">
+                <p class="text-center"></p>
+                    <img src="images/contact-thanks.PNG" id="project-example">
+            </div>
     </div>
     <footer>
         <p class="d-flex justify-content-center fixed-bottom" style="margin-top: 5px;">&copy; Dallas McGroarty<br />
