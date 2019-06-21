@@ -32,6 +32,14 @@
     animation-duration: 0.5s;
 }
 
+#about-wrap{
+    margin-bottom: 100px;
+}
+#sub-title {
+    font-size: 20px;
+    color: cornflowerblue;
+    font-weight: bold;
+}
 #resume {
     height: auto;
     width: 100%;
