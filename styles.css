@@ -27,13 +27,18 @@
     margin-right: 10px;
 }
 
+#home-foot {
+    padding-top: 100px;
+    position: static;
+}
+
 #about-box, #resume, #project-row, #project-title, #project-link, #project-text {
     animation-name: slide-down;
     animation-duration: 0.5s;
 }
 
 #about-wrap{
-    margin-bottom: 100px;
+    
 }
 #sub-title {
     font-size: 20px;
@@ -48,6 +53,7 @@
 }
 
 #resume-wrap {
+    height: 1300px;
     margin-top: 15px;
     margin: 0 auto;
     padding-bottom: 100px;
