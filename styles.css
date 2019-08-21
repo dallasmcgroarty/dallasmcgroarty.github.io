@@ -80,6 +80,23 @@
     border-radius: 5px;
 }
 
+#ranks-col {
+    margin-bottom: -150px;
+}
+
+#ranks-image {
+    height: 80%;
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#ranks-image:hover {
+    background-color: rgb(129, 241, 144);
+    width: 55%;
+}
 #project-image:hover {
     background-color: rgb(129, 241, 144);
     width: 75%;
@@ -107,6 +124,8 @@
 #project-link {
     text-decoration: none;
     margin-bottom: 10px;
+    height: auto;
+    font-size: 18px;
 }
 
 #project-example {
@@ -117,13 +136,46 @@
     background-color: white;
     border-radius: 5px;
 }
+@media screen and (min-width: 768px) {
+    .body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #ranks-col {
+        margin-bottom: -110px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .body {
         margin-left: 0px;
         margin-right: 0px;
     }
+    #ranks-col {
+        margin-bottom: -50px;
+    }
 }
 
+@media screen and (max-width: 1200px) {
+    .body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #ranks-col {
+        margin-bottom: -90px;
+    }
+}
+
+@media screen and (max-width: 998px) {
+    .body {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #ranks-col {
+        margin-bottom: -60px;
+    }
+}
 @keyframes slide-down {
     0% {
         opacity: 0;

@@ -9,7 +9,6 @@
     if (images.length === index) {
       index = 0;
     } else {
-      console.log(images[index]);
       var img = document.getElementById('face'); //  get img element
       img.src = images[index]; //  change the image
       index++;
