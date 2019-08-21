@@ -1,5 +1,5 @@
 #title {
-    font-size: 60px;
+    font-size: 100px;
 }
 
 #img-links {
@@ -8,9 +8,14 @@
     margin-bottom: 10px;
 }
 
+#img-faces {
+    height: 130px;
+}
+
 .nav-link {
     font-size: 20px;
-    color: rgb(7, 110, 90)
+    color: rgb(7, 110, 90);
+    font-family: "Arial Black";
 }
 
 #linkedin {
@@ -37,8 +42,12 @@
     animation-duration: 0.5s;
 }
 
-#about-wrap{
-    
+#about-wrap {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.p-2 {
+    font-size: 20px;
 }
 #sub-title {
     font-size: 20px;
@@ -53,6 +62,7 @@
 }
 
 #resume-wrap {
+    display: block;
     height: 1300px;
     margin-top: 15px;
     margin: 0 auto;
@@ -60,9 +70,12 @@
 }
 
 #down-wrap {
-    padding-top: 10px;
+    display: none;
 }
 
+#resume-mobile {
+    display: none;
+}
 #resume-link {
     text-decoration: none;
 }
@@ -114,7 +127,6 @@
     margin-bottom: 0px;
     font-size: 50px;
     font-family: 'Luckiest Guy', cursive;
-
 }
 
 #project-text {
@@ -136,44 +148,120 @@
     background-color: white;
     border-radius: 5px;
 }
-@media screen and (min-width: 768px) {
-    .body {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
 
-    #ranks-col {
-        margin-bottom: -110px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .body {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    #ranks-col {
-        margin-bottom: -50px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .body {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
+@media screen and (max-width: 998px),(max-width: 1200px){
     #ranks-col {
         margin-bottom: -90px;
     }
-}
 
-@media screen and (max-width: 998px) {
-    .body {
-        margin-left: 0px;
-        margin-right: 0px;
+    #ranks-image {
+        width: 70%;
     }
-    #ranks-col {
-        margin-bottom: -60px;
+
+    #project-image {
+        width: 100%;
+    }
+
+    #ranks-image:hover {
+        background-color: rgb(129, 241, 144);
+        width: 75%;
+    }
+
+    #project-image:hover {
+        background-color: rgb(129, 241, 144);
+        width: 105%;
+    }
+    
+    #title {
+        font-size: 120px;
+    }
+
+    .nav-link {
+        font-size: 40px;
+        color: rgb(7, 110, 90)
+    }    
+
+    #nav-bar {
+        margin-bottom: 15px;
+    }
+
+    #img-links {
+        margin-bottom: 10px;
+    }
+
+    #linkedin {
+        margin-top: 10px;
+        height: auto;
+        width: 80px;
+    }
+    
+    #img-faces {
+        height: 160px;
+    }
+
+    #github {
+        width: 120px;
+    }
+
+    #face {
+        height: auto;
+        width: 125px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .p-2 {
+        font-size: 30px;
+    }
+
+    #about-wrap {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #down-wrap {
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #resume-mobile{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+    }
+    
+    #resume-wrap {
+        display: none !important;
+        visibility: hidden;
+    }
+    #resume {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    #project-link {
+        text-decoration: none;
+        margin-bottom: 10px;
+        height: auto;
+        font-size: 35px;
+    }
+
+    #project-wrap #project-title {
+        font-size: 70px;
+    }
+
+    #project-text {
+        font-size: 35px;
+    }
+
+    #foot-copy {
+        font-size: 20px;
     }
 }
 @keyframes slide-down {
