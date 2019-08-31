@@ -149,6 +149,7 @@
     border-radius: 5px;
 }
 
+/* Mobile CSS adjustments */
 @media screen and (max-width: 998px),(max-width: 1200px){
     #ranks-col {
         margin-bottom: -90px;
@@ -211,8 +212,15 @@
         margin-right: 10px;
     }
 
+    #card-title {
+        font-size: 60px;
+    }
+    #sub-title {
+        font-size: 50px;
+    }
+
     .p-2 {
-        font-size: 30px;
+        font-size: 45px;
     }
 
     #about-wrap {
