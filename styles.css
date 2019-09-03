@@ -14,8 +14,12 @@
 
 .nav-link {
     font-size: 20px;
-    color: rgb(7, 110, 90);
+    color: black;
     font-family: "Arial Black";
+}
+
+.nav-link:hover {
+    color: yellow;
 }
 
 #linkedin {
@@ -179,7 +183,6 @@
 
     .nav-link {
         font-size: 40px;
-        color: rgb(7, 110, 90)
     }    
 
     #nav-bar {
