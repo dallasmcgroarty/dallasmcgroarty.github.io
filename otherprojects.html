@@ -5,6 +5,7 @@
   <title>Dallas McGroarty</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -57,23 +58,66 @@
         </li>
     </ul>
     <div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
-        <p class="text-center" id="project-title">Members Only</p>
-        <a href="https://github.com/dallasmcgroarty/MembersOnly" target="_blank" class="badge badge-info" id="project-link">Members Only Github Project</a>
-        <p class="text-center" id="project-text">Members Only!
+        <p class="text-center" id="project-title">Parser Program</p>
+        <a href="https://github.com/dallasmcgroarty/Parser-Program" target="_blank" class="badge badge-info" id="project-link">Parser Program Github Project</a>
+        <p class="text-center" id="project-text">
+            Parser Program! A parser that outputs assembly instructions according to a made up programming language, written in C++.
 
-                A simple web application using PHP, Apache, MySQL/MySQLi, HTML, CSS, Bootstrap.
-                
-                Members Only allows users to securely register and sign in to a site and look at some data in a database.
-                
-                Once signed in and authenticated users have some access to the database which stores a list of foods and favorites. Users may add new foods to the database and add or delete foods from their list of favorites.
-                
-                PHP and MySQL/MySQLi used to authenticate users and access database.
-                
-                HTML, CSS, and Bootstrap handle the front-end.
-                
-                SQL scripts are included to create the database, create a user to access the database, dump the database, and restore the database.</p>
+<br>Contains a lexer to break down input source code and a parser that uses the broken down source code to output the assembly code of the input.
+
+<br>The input source code is some made up language and is available in the other files labeled "two", "three", "five", etc.. which are used to test the program
+        </p>
         </div>
-    </div>
+<div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+        <p class="text-center" id="project-title">Lamport's Logical Clock</p>
+        <a href="https://github.com/dallasmcgroarty/Lamport-s-Logical-Clock" target="_blank" class="badge badge-info" id="project-link">Lamport's Logical Clock Github Project</a>
+        <p class="text-center" id="project-text">
+            Lamport's Logical Clock is program that simulates Lamport's algorithm where order of events are determined in a distributed computer system.
+
+            <br>Given an M x N Matrix the program outputs the logical clock values for each event.
+
+            Written in C++.
+        </p>
+        </div>
+<div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+        <p class="text-center" id="project-title">Body Fat Prediction Project</p>
+        <a href="https://github.com/dallasmcgroarty/Body-Fat-Prediction-Project" target="_blank" class="badge badge-info" id="project-link">Body Fat Prediction Github Project</a>
+        <p class="text-center" id="project-text">
+            Using previously gathered data, find a way to use the data in order to predict someones body fat percentage. 
+            
+            <br>Different variables and models are created to find the best MSE, the best model is used to create a function that will predict someones body fat percentage given the variables specified. 
+            
+            <br>Cross validation is used with the caret library and the resulting data is stored in a linear model. 
+            
+            <br>After finding the model with the best MSE, the coefficients of that model are used to create the body fat function.
+
+            <br><br>Language/Software: R was used to carry out this project and the caret library is needed to use the main cross validation function.
+        </p>
+        </div>
+        <div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+            <p class="text-center" id="project-title">UDP Server/Client</p>
+            <a href="https://github.com/dallasmcgroarty/UDP-Server-Client" target="_blank" class="badge badge-info" id="project-link">UDP Server/Client Github Project</a>
+            <p class="text-center" id="project-text">
+                Program to send data from client to server via UDP
+
+<br>Language: Python
+
+<br>Server sets up and holds a file and waits for client to send a LIST message, the server responds to the client with a list of available sections of the file, the client then requests sections of the file that the server holds, the server services the requests back to the client. The client verifies the file contents to ensure no errors.
+
+<br>Ran on linux or windows machine, python in windows, python3 on linux.
+
+<br>Run server in terminal: python3 SectionServer.py testfile.gz
+
+<br>Run client in terminal: python3 SectionClient.py localhost testfile.gz
+            </p>
+            </div>
+<div class="d-flex align-items-center container" style="flex-direction: column" id="project-wrap">
+            <p class="text-center" id="project-title">Python Gui Database</p>
+            <a href="https://github.com/dallasmcgroarty/Python-Gui-Database" target="_blank" class="badge badge-info" id="project-link">Python Gui Database Github Project</a>
+            <p class="text-center" id="project-text">
+                Python program to read data from a file, input data into a database file, and retrieve the data and display it to the user using tkinter
+                
+                <br>Program uses SQLite3 to create the database and execute queries.
     <footer>
         <p class="d-flex justify-content-center" id="home-foot" style="margin-top: 5px;">&copy; Dallas McGroarty<br />
         </p>
