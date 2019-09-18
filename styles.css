@@ -41,11 +41,14 @@
     position: static;
 }
 
-#about-box, #resume, #project-row, #project-title, #project-link, #project-text {
+#about-box, #resume, #project-title, #project-link, #project-text {
     animation-name: slide-down;
     animation-duration: 0.5s;
 }
 
+#about-box {
+    width: 60%;
+}
 #about-wrap {
     padding-left: 300px;
     padding-right: 300px;
@@ -231,6 +234,10 @@
         padding-right: 0px;
     }
 
+    #about-box {
+        width: 100%;
+    }
+
     #down-wrap {
         display: block;
         font-size: 30px;
@@ -275,6 +282,7 @@
         font-size: 20px;
     }
 }
+
 @keyframes slide-down {
     0% {
         opacity: 0;
