@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
     top: 50px;
     text-align: right;
     background-color: transparent;
+    z-index: 1;
 }
 
 .nav {
@@ -63,7 +64,7 @@ body::-webkit-scrollbar {
     transition: .2s ease-in-out;
     transform-origin: right;
     position: absolute;
-    top: 42%;
+    top: 35%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
@@ -73,11 +74,30 @@ body::-webkit-scrollbar {
     transform: scale(1.05) translate(-45%, -50%);
 }
 
+#sub-title {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0;
+    transition: .2s ease-in-out;
+    transform-origin: right;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#sub-title:hover {
+    transform: scale(1.05) translate(-45%, -50%);
+}
+
 .port-links {
     position: absolute;
     text-align: center;
     margin: 0;
-    top: 50%;
+    top: 48%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
@@ -112,7 +132,37 @@ body::-webkit-scrollbar {
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -4px;
+    margin-bottom: -4px;
+}
+
+#resume {
+    position: relative;
+}
+
+#bg-resume {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-bottom: -5px;
+}
+
+#resume-link {
+    color:black;
+    font-family: 'Bangers', cursive;
+    text-decoration: none;
+    position: absolute;
+    margin: 0;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+#resume-link:hover {
+    transform: scale(1.2) translate(-43%, -50%);
 }
 
 @keyframes slide-in {

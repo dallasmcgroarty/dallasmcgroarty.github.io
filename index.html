@@ -13,19 +13,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content= "width=device-width, initial-scale=1.0">
   <title>Dallas McGroarty</title>
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav class="nav-bar">
+        <button type="button" class="home-btn nav">Home</button>
+        <button type="button" class="projects-btn nav">Projects</button>
+        <button type="button" class="resume-btn nav" id="res-btn">Resume</button>
+    </nav>
     <div id="home">
-        <nav class="nav-bar">
-            <button type="button" class="home-btn nav">Home</button>
-            <button type="button" class="projects-btn nav">Projects</button>
-            <button type="button" class="resume-btn nav">Resume</button>
-        </nav>
         <img src='bg/cool.gif' id="bg-home">
         <div class="wrapper">
             <p id="title-name">Dallas McGroarty</p>
+            <p id="sub-title">Web Developer</p>
             <nav class="port-links">
                 <a href="https://github.com/dallasmcgroarty" target="_blank" id="git-link"> 
                     <img src="images/github.png" id="github" style="max-width: 64px; max-height: 64px;">
@@ -40,4 +46,12 @@
         <img src='bg/city.jpg' id="bg-projects">
         
     </div>
+    <div id="resume">
+        <img src='bg/city1.jpg' id="bg-resume">
+        <div class="resume-wrapper">
+            <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link" style="font-size: 2vw;">Download Resume</a>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
+</html>
