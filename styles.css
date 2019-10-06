@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
     color: grey;
 }
 
-.home-btn.nav:active, .projects-btn.nav:active, .resume-btn.nav:active {
+.home-btn.nav:active, .projects-btn.nav:active, .resume-btn.nav:active, .about-btn.nav:active {
     transform: translateY(4px);
 }
 
@@ -91,6 +91,19 @@ body::-webkit-scrollbar {
 
 #sub-title:hover {
     transform: scale(1.05) translate(-45%, -50%);
+}
+
+#about {
+    display: none;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    width: 50%;
+    font-size: 20px;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .port-links {

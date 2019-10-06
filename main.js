@@ -20,7 +20,22 @@
     $('html,body').animate({
       scrollTop: $('#home').offset().top },
     'slow');
+    $('.title.wrapper').slideDown();
+    $('#about').css('display', 'none');
   });
+  // about activate and scroll
+  $('.about-btn.nav').click(function () {
+    $('html,body').animate({
+      scrollTop: $('#home').offset().top },
+    'slow');
+  });
+
+  // slide up about paragraph
+  $('.about-btn.nav').click(function () {
+    $('.title.wrapper').css('display', 'none');
+    $('#about').slideDown();
+  });
+
   // scroll to projects
   $('.projects-btn.nav').click(function () {
     $('html,body').animate({
