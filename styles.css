@@ -8,6 +8,11 @@ body::-webkit-scrollbar {
     display: none; 
 } 
 
+/****
+
+Home page CSS
+
+******/
 #bg-home {
     width: 100%;
     background-size: 100%;
@@ -135,6 +140,12 @@ body::-webkit-scrollbar {
     transform: scale(1.5)
 }
 
+/****
+
+Projects CSS
+
+******/
+
 #project {
     position: sticky;
 }
@@ -147,6 +158,12 @@ body::-webkit-scrollbar {
     margin-top: -4px;
     margin-bottom: -4px;
 }
+
+/****
+
+Resume CSS
+
+******/
 
 #resume {
     position: relative;
