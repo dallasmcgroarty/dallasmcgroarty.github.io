@@ -15,6 +15,8 @@
   //   }
   // }, 500);
 
+  const projects = ['.ranks.example', '.members-only.example','.tuffy-pub.example'];
+  let currentExample = 0;
   let checkProject = 0;
   // grab first project and show it
   $('.ranks.example').css('visibility','visible');
@@ -25,8 +27,8 @@
     $('html,body').animate({
       scrollTop: $('#home').offset().top },
     'slow');
-    $('.title.wrapper').slideDown();
-    $('#about').css('display', 'none');
+    $('.title.wrapper').show('slow');
+    $('#about').hide('slow')
   });
   // about activate and scroll
   $('.about-btn.nav').click(function () {
@@ -37,8 +39,8 @@
 
   // slide up about paragraph
   $('.about-btn.nav').click(function () {
-    $('.title.wrapper').css('display', 'none');
-    $('#about').slideDown();
+    $('.title.wrapper').hide('slow');
+    $('#about').show('slow');
   });
 
   // scroll to projects
@@ -47,8 +49,7 @@
       scrollTop: $('#projects').offset().top },
     'slow');
     if(checkProject === 0) {
-      $('.ranks.example').css('animation', 'slideInLeft 1s forwards');
-      $('.ranks.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+      $('.ranks.example').animate({left:'50%'},1000);
       checkProject = 1;
     }
   });
@@ -60,19 +61,37 @@
   });
 
   //slide in project buttons
-  // slide in from right to left
+
+  // slide in from right to left, looping through project examples
+  // simple counter and array to hold div class names
   $('.next-btn.arrow').click(function () {
-    $('.ranks.example').css('animation', 'slideOutRight 1s forwards');
-    $('.ranks.example').css('-webkit-animation', 'slideOutRight 1s forwards;');
-    $('.members-only.example').css('animation', 'slideInLeft 1s forwards');
-    $('.members-only.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+    if(checkProject === 0) {
+      $('.ranks.example').animate({left:'50%'},1000);
+      checkProject = 1;
+    } else if (currentExample != projects.length - 1) {
+      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      $(projects[currentExample + 1]).animate({left: '50%'}, 1000);
+      currentExample += 1;
+    } else if (currentExample === projects.length - 1) {
+      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      currentExample = 0;
+      $(projects[currentExample]).animate({left: '50%'}, 1000);
+    }
   })
 
-  // slide in from left to right
+  // go to previous exmaple on back button press
   $('.back-btn.arrow').click(function () {
-    $('.members-only.example').css('animation', 'slideOutRight 1s forwards');
-    $('.members-only.example').css('-webkit-animation', 'slideOutRight 1s forwards;');
-    $('.ranks.example').css('animation', 'slideInLeft 1s forwards');
-    $('.ranks.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+    if(checkProject === 0) {
+      $('.ranks.example').animate({left:'50%'},1000);
+      checkProject = 1;
+    } else if (currentExample != 0){
+      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      $(projects[currentExample - 1]).animate({left:'50%'},1000);
+      currentExample -= 1
+    } else if (currentExample === 0) {
+      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      currentExample = projects.length - 1;
+      $(projects[currentExample]).animate({left: '50%'}, 1000);
+    }
   })
 })();
