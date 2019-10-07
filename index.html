@@ -50,9 +50,67 @@
             </p>
         </div>
     </div>
+    <!-- Project section -->
     <div id="projects">
         <img src='bg/city.jpg' id="bg-projects">
-        
+        <button type="button" class="next-btn arrow"><i class="right"></i></button>
+        <button type="button" class="back-btn arrow"><i class="left"></i></button>
+        <!-- Ranks project first to show -->
+        <div class="ranks example">
+            <div class="ranks wrapper">
+                <div class="image-wrapper">
+                    <button type="button" class="prev-image arrow"><i class="left"></i></button>
+                    <img src="images/ranks-img.PNG" id="ranks-image" class="project-image">
+                    <button type="button" class="next-image arrow"><i class="right"></i></button>
+                </div>
+                <div class="ranks description">
+                    <h1 class="project-title" style="text-align: center;">Ranks</h1>
+                    <p class="project-text" style="text-align: center;">Ranks is a mobile first free score card web app. 
+                        Users can add player cards which contain the player's name and score and dynamically 
+                        update their score through some plus and minus buttons. No database used. Everything is strictly done using local storage. 
+                        This way it is super light weight, fast, and non-invasive. Developed using HTML, CSS, Bootstrap, and JavaScript.
+                        Currently still developing and working on additions/bug fixes. But the app is fully functional.
+                        Desktop site is currently not formatted nicely since it isn't meant to be used on the desktop, but I may work on that at some point.
+                        If on iOS, disable private browsing in order to allow access to local storage.
+                    </p>
+                    <a href="https://github.com/dallasmcgroarty/ranks" target="_blank" id="git-link"> 
+                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                    </a>
+                    <a href="https://ranks.pw" target="_blank" id="in-link">
+                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Members only project -->
+        <div class="members-only example">
+                <div class="members-only wrapper">
+                    <div class="image-wrapper">
+                        <button type="button" class="prev-image arrow"><i class="left"></i></button>
+                        <img src="images/login.PNG" id="members-only-image" class="project-image">
+                        <button type="button" class="next-image arrow"><i class="right"></i></button>
+                    </div>
+                    <div class="members-only description" style="margin-left: 100px;">
+                        <h1 class="project-title" style="text-align: center;">Members Only</h1>
+                        <p class="project-text" style="text-align: center;">
+                                A simple web application using PHP, Apache, MySQL/MySQLi, HTML, CSS, Bootstrap.
+                
+                                Members Only allows users to securely register and sign in to a site and look at some data in a database.
+                                
+                                Once signed in and authenticated users have some access to the database which stores a list of foods and favorites. Users may add new foods to the database and add or delete foods from their list of favorites.
+                                
+                                PHP and MySQL/MySQLi used to authenticate users and access database.
+                                
+                                HTML, CSS, and Bootstrap handle the front-end.
+                                
+                                SQL scripts are included to create the database, create a user to access the database, dump the database, and restore the database.
+                        </p>
+                        <a href="https://github.com/dallasmcgroarty/MembersOnly" target="_blank" id="git-link"> 
+                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
     </div>
     <div id="resume">
         <img src='bg/city1.jpg' id="bg-resume">

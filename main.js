@@ -15,6 +15,11 @@
   //   }
   // }, 500);
 
+  let checkProject = 0;
+  // grab first project and show it
+  $('.ranks.example').css('visibility','visible');
+
+  //$('.members-only.example').css('visibility', 'visible');
   // scroll to home
   $('.home-btn.nav').click(function () {
     $('html,body').animate({
@@ -41,6 +46,11 @@
     $('html,body').animate({
       scrollTop: $('#projects').offset().top },
     'slow');
+    if(checkProject === 0) {
+      $('.ranks.example').css('animation', 'slideInLeft 1s forwards');
+      $('.ranks.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+      checkProject = 1;
+    }
   });
   // scroll to resume
   $('.resume-btn.nav').click(function () {
@@ -48,4 +58,21 @@
       scrollTop: $('#resume').offset().top },
     'slow');
   });
+
+  //slide in project buttons
+  // slide in from right to left
+  $('.next-btn.arrow').click(function () {
+    $('.ranks.example').css('animation', 'slideOutRight 1s forwards');
+    $('.ranks.example').css('-webkit-animation', 'slideOutRight 1s forwards;');
+    $('.members-only.example').css('animation', 'slideInLeft 1s forwards');
+    $('.members-only.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+  })
+
+  // slide in from left to right
+  $('.back-btn.arrow').click(function () {
+    $('.members-only.example').css('animation', 'slideOutRight 1s forwards');
+    $('.members-only.example').css('-webkit-animation', 'slideOutRight 1s forwards;');
+    $('.ranks.example').css('animation', 'slideInLeft 1s forwards');
+    $('.ranks.example').css('-webkit-animation', 'slideInLeft 1s forwards;');
+  })
 })();
