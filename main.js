@@ -15,7 +15,8 @@
   //   }
   // }, 500);
 
-  const projects = ['.ranks.example', '.members-only.example','.tuffy-pub.example'];
+  const projects = ['.ranks.example', '.members-only.example','.tuffy-pub.example',
+   '.open-inventory.example', '.grid-game.example'];
   let currentExample = 0;
   let checkProject = 0;
 
@@ -66,7 +67,7 @@
       $('.ranks.example').animate({ left: '50%' }, 1000);
       checkProject = 1;
     } else if (currentExample !== projects.length - 1) {
-      $(projects[currentExample]).animate({ left: '150%' }, 1000);
+      $(projects[currentExample]).animate({ left: '150%'}, 1000);
       $(projects[currentExample + 1]).animate({ left: '50%' }, 1000);
       currentExample += 1;
     } else if (currentExample === projects.length - 1) {

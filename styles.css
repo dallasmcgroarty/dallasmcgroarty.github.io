@@ -2,6 +2,9 @@ body {
     margin: 0;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
+    /* overflow-x: hidden, fixes projects showing up on right side of screen
+    and users being able to scroll/swipe to see it */
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar { 
@@ -139,7 +142,7 @@ Home page CSS
 /***** 1.5 scaled hovers 
 */
 #linkedin:hover, #github:hover, .nav:hover, .arrow:hover, 
-#project-github:hover, #project-site:hover {
+#project-github:hover, #project-site:hover, #project-github-only:hover {
     transform: scale(1.5)
 }
 
@@ -214,6 +217,7 @@ i{
     left: 150%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    box-sizing: border-box; 
 }
 .wrapper {
     display: flex;
@@ -225,6 +229,10 @@ i{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#ranks-image-wrap {
+    margin-right: 100px;
 }
 
 #ranks-image {
@@ -278,6 +286,10 @@ i{
     margin-left: 50px;
 }
 
+.ranks.description {
+    margin-left: 100px;
+}
+
 .project-title{
     font-family: 'Bangers', cursive;
     font-weight: 10;
@@ -292,6 +304,7 @@ i{
 .project-text{
     font-family: 'Acme', sans-serif;
     font-size: 25px;
+    font-size: 1.5vw;
     transition: .2s ease-in-out;
 }
 
@@ -309,10 +322,19 @@ i{
     cursor: pointer;
 }
 
+#project-github-only{
+    display: block;
+    transition: .2s ease-in-out;
+    width: auto;
+    width: 5vw;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+}
 #project-site {
     position: absolute;
     width: auto;
-    width: 7vw;
+    width: 4vw;
     height: auto;
     transition: .2s ease-in-out;
     left: 50%;
@@ -422,7 +444,6 @@ Animations / transitions
 }
 
 @media only screen and (max-width: 768px) {
-
     .project-title {
         font-size: 15px;
     }
@@ -447,8 +468,16 @@ Animations / transitions
         width: 40%;
     }
 
+    #ranks-image-wrap {
+        margin-right: 0;
+    }
+    
     #ranks-image {
         width: 60%;
+    }
+
+    .ranks.description {
+        margin-left: 0;
     }
 
     .project-image {
