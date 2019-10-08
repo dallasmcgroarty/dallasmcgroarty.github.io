@@ -237,7 +237,7 @@ i{
 }
 
 .project-image {
-    max-width: 100%;
+    max-width: 70%;
     max-height: 400px;
     width: 700px;
     border-radius: 5px;
@@ -275,8 +275,7 @@ i{
     position: relative;
     height: auto;
     max-width: 40%;
-    width: 40%;
-    margin-left: 150px;
+    margin-left: 50px;
 }
 
 .project-title{
@@ -422,6 +421,52 @@ Animations / transitions
     100% { left: -150%; }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
+    .project-title {
+        font-size: 15px;
+    }
+
+    .project-text {
+        font-size: 8px;
+    }
+
+    .description {
+        margin-left: 0;
+    }
+
+    .members-only.description {
+        margin-left: 0;
+    }
+
+    .tuffy-pub.description {
+        margin-left: 0;
+    }
+
+    .image-wrapper {
+        width: 40%;
+    }
+
+    #ranks-image {
+        width: 60%;
+    }
+
+    .project-image {
+        width: 70%;
+    }
+
+    i{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    .next-image.arrow {
+        margin-left: 0px;
+    }
+
+    .prev-image.arrow {
+        margin-right: 0px;
+    }
 }

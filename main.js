@@ -18,10 +18,7 @@
   const projects = ['.ranks.example', '.members-only.example','.tuffy-pub.example'];
   let currentExample = 0;
   let checkProject = 0;
-  // grab first project and show it
-  $('.ranks.example').css('visibility','visible');
 
-  //$('.members-only.example').css('visibility', 'visible');
   // scroll to home
   $('.home-btn.nav').click(function () {
     $('html,body').animate({
@@ -60,7 +57,7 @@
     'slow');
   });
 
-  //slide in project buttons
+  // slide in project buttons
 
   // slide in from right to left, looping through project examples
   // simple counter and array to hold div class names
@@ -68,30 +65,30 @@
     if(checkProject === 0) {
       $('.ranks.example').animate({left:'50%'},1000);
       checkProject = 1;
-    } else if (currentExample != projects.length - 1) {
-      $(projects[currentExample]).animate({left: '150%'}, 1000);
-      $(projects[currentExample + 1]).animate({left: '50%'}, 1000);
+    } else if (currentExample !== projects.length - 1) {
+      $(projects[currentExample]).animate({ left: '150%' }, 1000);
+      $(projects[currentExample + 1]).animate({ left: '50%' }, 1000);
       currentExample += 1;
     } else if (currentExample === projects.length - 1) {
-      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      $(projects[currentExample]).animate({ left: '150%' }, 1000);
       currentExample = 0;
-      $(projects[currentExample]).animate({left: '50%'}, 1000);
+      $(projects[currentExample]).animate({ left: '50%' }, 1000);
     }
   })
 
   // go to previous exmaple on back button press
   $('.back-btn.arrow').click(function () {
-    if(checkProject === 0) {
+    if (checkProject === 0) {
       $('.ranks.example').animate({left:'50%'},1000);
       checkProject = 1;
-    } else if (currentExample != 0){
-      $(projects[currentExample]).animate({left: '150%'}, 1000);
-      $(projects[currentExample - 1]).animate({left:'50%'},1000);
-      currentExample -= 1
+    } else if (currentExample !== 0) {
+      $(projects[currentExample]).animate({ left: '150%' }, 1000);
+      $(projects[currentExample - 1]).animate({ left: '50%' }, 1000);
+      currentExample -= 1;
     } else if (currentExample === 0) {
-      $(projects[currentExample]).animate({left: '150%'}, 1000);
+      $(projects[currentExample]).animate({ left: '150%' }, 1000);
       currentExample = projects.length - 1;
-      $(projects[currentExample]).animate({left: '50%'}, 1000);
+      $(projects[currentExample]).animate({ left: '50%' }, 1000);
     }
-  })
+  });
 })();
