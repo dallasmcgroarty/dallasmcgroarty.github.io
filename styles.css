@@ -18,7 +18,8 @@ Home page CSS
 ******/
 #bg-home {
     width: 100%;
-    background-size: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
     margin-top: -33px;
 }
@@ -160,6 +161,7 @@ Projects CSS
     height: 100%;
     width: 100%;
     background-size: cover;
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
     margin-top: -4px;
     margin-bottom: -4px;
@@ -245,10 +247,12 @@ i{
 }
 
 .project-image {
+    height: auto;
+    width: auto;
     max-width: 70%;
     max-height: 400px;
     width: 700px;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 0;
     transition: .2s ease-in-out;
 }
@@ -357,6 +361,7 @@ Resume CSS
     height: 100%;
     width: 100%;
     background-size: cover;
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: -5px;
 }
@@ -444,14 +449,60 @@ Animations / transitions
 }
 
 @media only screen and (max-width: 768px) {
-    .project-title {
+    #bg-home {
+        max-height: 105vh;
+        height: auto;
+        width: auto;
+    }
+
+    #bg-projects {
+        max-height: 105vh;
+        height: auto;
+        width: auto;
+    }
+
+    #bg-resume {
+        max-height: 105vh;
+        height: auto;
+        width: auto;
+    }
+
+    .nav-bar{
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .nav {
         font-size: 15px;
     }
 
-    .project-text {
-        font-size: 8px;
+    #title-name {
+        font-size: 50px;
     }
 
+    #about {
+        font-size: 20px;
+        padding-right: 5px;
+        padding-left: 5px;
+        width: auto;
+        top: 45%;
+    }
+
+    .port-links {
+        top: 49%;
+    }
+
+    #sub-title {
+        font-size: 30px;
+    }
+
+    #linkedin {
+        width: 60%;
+    }
+
+    #github {
+        width: 60%;
+    }
     .description {
         margin-left: 0;
     }
@@ -478,6 +529,15 @@ Animations / transitions
 
     .ranks.description {
         margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .tuffy-pub.description {
+        margin-bottom: 20px;
+    }
+
+    .open-inventory.description {
+        padding-top: 20px;
     }
 
     .project-image {
@@ -497,5 +557,32 @@ Animations / transitions
 
     .prev-image.arrow {
         margin-right: 0px;
+    }
+
+    .project-title{
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+
+    #members-only-title {
+        padding-top: 20px;
+    }
+
+    .project-text{
+        font-size: 8px;
+        margin-bottom: 0px;
+    }
+
+    #project-site {
+        margin-top: 8px;
+        width: 20%;
+    }
+
+    #project-github, #project-github-only {
+        width: 30%;
+    }
+
+    #resume-link { 
+        
     }
 }
