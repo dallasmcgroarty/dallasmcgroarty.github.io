@@ -25,7 +25,7 @@
       scrollTop: $('#home').offset().top },
     'slow');
     $('.title.wrapper').show('slow');
-    $('#about').hide('slow')
+    $('#about').hide('slow');
   });
   // about activate and scroll
   $('.about-btn.nav').click(function () {
@@ -45,8 +45,8 @@
     $('html,body').animate({
       scrollTop: $('#projects').offset().top },
     'slow');
-    if(checkProject === 0) {
-      $('.ranks.example').animate({left:'50%'},1000);
+    if (checkProject === 0) {
+      $('.ranks.example').animate({ left: '50%' }, 1000);
       checkProject = 1;
     }
   });
@@ -63,7 +63,7 @@
   // simple counter and array to hold div class names
   $('.next-btn.arrow').click(function () {
     if(checkProject === 0) {
-      $('.ranks.example').animate({left:'50%'},1000);
+      $('.ranks.example').animate({ left: '50%' }, 1000);
       checkProject = 1;
     } else if (currentExample !== projects.length - 1) {
       $(projects[currentExample]).animate({ left: '150%' }, 1000);
@@ -79,7 +79,7 @@
   // go to previous exmaple on back button press
   $('.back-btn.arrow').click(function () {
     if (checkProject === 0) {
-      $('.ranks.example').animate({left:'50%'},1000);
+      $('.ranks.example').animate({ left: '50%' }, 1000);
       checkProject = 1;
     } else if (currentExample !== 0) {
       $(projects[currentExample]).animate({ left: '150%' }, 1000);
