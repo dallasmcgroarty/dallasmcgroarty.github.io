@@ -458,10 +458,15 @@ Animations / transitions
         width: auto;
     }
 
+    #projects {
+        max-width: 375px;
+    }
+
     #bg-projects {
         max-height: 105vh;
         height: auto;
         width: auto;
+        transform: translate( -50%, 0%);
     }
 
     #bg-resume {
