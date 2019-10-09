@@ -237,13 +237,14 @@ i{
 
 #ranks-image-wrap {
     margin-right: 100px;
+    margin-left: 50px;
 }
 
 #ranks-image {
     height: auto;
-    max-width: 70%;
+    max-width: 80%;
     width: auto;
-    max-height: 500px;
+    max-height: 600px;
     border-radius: 5px;
     transition: .2s ease-in-out;
 }
@@ -293,7 +294,7 @@ i{
 }
 
 .ranks.description {
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 .project-title{
@@ -567,6 +568,7 @@ Animations / transitions
 
     #ranks-image-wrap {
         margin-right: 0;
+        margin-left: 0;
         margin-bottom: 0px;
     }
     

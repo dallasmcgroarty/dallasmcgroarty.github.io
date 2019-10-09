@@ -58,6 +58,9 @@
     'slow');
   });
 
+  for (let i = 0; i < projects.length; i++) {
+    $(projects[i]).css('width', '100%');
+  }
   // slide in project buttons
 
   // slide in from right to left, looping through project examples
