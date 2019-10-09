@@ -105,6 +105,7 @@ Home page CSS
 #about {
     display: none;
     text-align: center;
+    color: white;
     margin: 0;
     position: absolute;
     width: 50%;
@@ -221,6 +222,7 @@ i{
     transform: translate(-50%, -50%);
     box-sizing: border-box; 
 }
+
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -470,10 +472,15 @@ Animations / transitions
     .nav-bar{
         text-align: center;
         margin-right: 0px;
+        top: 20px;
     }
 
     .nav {
         font-size: 15px;
+    }
+
+    #res-btn {
+        margin-right: 0px;
     }
 
     #title-name {
@@ -482,6 +489,7 @@ Animations / transitions
 
     #about {
         font-size: 20px;
+        color: white;
         padding-right: 5px;
         padding-left: 5px;
         width: auto;
@@ -503,74 +511,113 @@ Animations / transitions
     #github {
         width: 60%;
     }
+
+    .ranks.example {
+        /* visibility: hidden;  */
+        position: absolute;
+        margin: 0;
+        top: 48%;
+        left: 150%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+    }
+
+    .example {
+        top: 50%;
+        width: '100%';
+        height: 'auto';
+    }
+    
     .description {
-        margin-left: 0;
+        margin: auto;
+        max-width: 80%;
+    }
+
+    .ranks.description {
+        margin: auto;
+        margin-top: 10px;
     }
 
     .members-only.description {
-        margin-left: 0;
+        margin-top: 50px;
     }
-
+    
     .tuffy-pub.description {
-        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    
+    .open-inventory.description {
+        margin-top: 30px;
     }
 
+    .grid-game.description {
+        margin-bottom: 180px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .image-wrapper {
-        width: 40%;
+        margin: auto;
     }
 
     #ranks-image-wrap {
         margin-right: 0;
+        margin-bottom: 0px;
     }
     
+    .members.image-wrapper {
+        margin-top: 80px;
+    }
+
+    .tuffy.image-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .open.image-wrapper {
+        margin-top: 30px;
+    }
+
+    .grid.image-wrapper {
+        margin-top: 10px;
+    }
+
     #ranks-image {
-        width: 60%;
-    }
-
-    .ranks.description {
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-
-    .tuffy-pub.description {
-        margin-bottom: 20px;
-    }
-
-    .open-inventory.description {
-        padding-top: 20px;
+        width: 40%;
     }
 
     .project-image {
-        width: 70%;
+        width: 100%;
     }
 
     i{
         border: solid black;
         border-width: 0 3px 3px 0;
         display: inline-block;
-        padding: 5px;
+        padding: 8px;
     }
     
     .next-image.arrow {
-        margin-left: 0px;
+        margin-left: 10px;
     }
 
     .prev-image.arrow {
-        margin-right: 0px;
+        margin-right: 10px;
     }
 
     .project-title{
-        font-size: 10px;
+        font-size: 25px;
         margin-bottom: 0px;
-    }
-
-    #members-only-title {
-        padding-top: 20px;
     }
 
     .project-text{
-        font-size: 8px;
+        font-size: 16px;
         margin-bottom: 0px;
+        margin-top: 5px;
     }
 
     #project-site {
