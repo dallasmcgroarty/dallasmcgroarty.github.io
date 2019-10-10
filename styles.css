@@ -452,10 +452,16 @@ Animations / transitions
 }
 
 @media only screen and (max-width: 768px) {
+
+    /*****
+        Background images
+    *****/
+
     #bg-home {
         max-height: 105vh;
         height: auto;
         width: auto;
+        transform: translate( -59%, 0%);
     }
 
     #projects {
@@ -475,6 +481,10 @@ Animations / transitions
         width: auto;
     }
 
+    /*****
+        Home page css
+    *****/
+
     .nav-bar{
         text-align: center;
         margin-right: 0px;
@@ -491,6 +501,11 @@ Animations / transitions
 
     #title-name {
         font-size: 50px;
+        top: 13%;
+    }
+
+    #sub-title {
+        top: 20%;
     }
 
     #about {
@@ -503,7 +518,7 @@ Animations / transitions
     }
 
     .port-links {
-        top: 49%;
+        top: 28%;
     }
 
     #sub-title {
@@ -517,6 +532,10 @@ Animations / transitions
     #github {
         width: 60%;
     }
+
+    /****
+        Project images, text, wrappers css
+      ****/
 
     .ranks.example {
         /* visibility: hidden;  */
@@ -535,6 +554,10 @@ Animations / transitions
         height: 'auto';
     }
     
+    /*****
+        Project descriptions css
+      ****/
+
     .description {
         margin: auto;
         max-width: 80%;
@@ -542,7 +565,8 @@ Animations / transitions
 
     .ranks.description {
         margin: auto;
-        margin-top: 10px;
+        margin-top: 30px;
+        margin-bottom: 50px;
     }
 
     .members-only.description {
@@ -561,6 +585,10 @@ Animations / transitions
         margin-bottom: 180px;
     }
 
+    /*****
+        Wrappers, project images
+      *****/
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -574,11 +602,11 @@ Animations / transitions
     #ranks-image-wrap {
         margin-right: 0;
         margin-left: 0;
-        margin-bottom: 0px;
+        margin-top: 0px;
     }
     
     .members.image-wrapper {
-        margin-top: 80px;
+        margin-top: 38px;
     }
 
     .tuffy.image-wrapper {
@@ -594,7 +622,7 @@ Animations / transitions
     }
 
     #ranks-image {
-        width: 40%;
+        width: 35%;
     }
 
     .project-image {
@@ -634,9 +662,5 @@ Animations / transitions
 
     #project-github, #project-github-only {
         width: 30%;
-    }
-
-    #resume-link { 
-        
     }
 }

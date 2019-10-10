@@ -15,7 +15,8 @@
   //   }
   // }, 500);
 
-  const projects = ['.ranks.example', '.members-only.example', '.tuffy-pub.example', 
+  // project example class names
+  const projects = ['.ranks.example', '.members-only.example', '.tuffy-pub.example',
     '.open-inventory.example', '.grid-game.example'];
   let currentExample = 0;
   let checkProject = 0;
@@ -61,10 +62,10 @@
   for (let i = 0; i < projects.length; i++) {
     $(projects[i]).css('width', '100%');
   }
-  // slide in project buttons
 
   // slide in from right to left, looping through project examples
   // simple counter and array to hold div class names
+  // Go to next example function
   $('.next-btn.arrow').click(function () {
     if (checkProject === 0) {
       $('.ranks.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
@@ -78,7 +79,7 @@
       currentExample = 0;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }
-  })
+  });
 
   // go to previous exmaple on back button press
   $('.back-btn.arrow').click(function () {
