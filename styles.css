@@ -585,6 +585,10 @@ Animations / transitions
         margin-bottom: 180px;
     }
 
+    .robo-friends.description {
+        margin-bottom: 55px;
+    }
+
     /*****
         Wrappers, project images
       *****/
@@ -619,6 +623,10 @@ Animations / transitions
 
     .grid.image-wrapper {
         margin-top: 10px;
+    }
+
+    .robo.image-wrapper {
+        margin-bottom: 50px;
     }
 
     #ranks-image {

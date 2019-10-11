@@ -16,7 +16,7 @@
   // }, 500);
 
   // project example class names
-  const projects = ['.ranks.example', '.members-only.example', '.tuffy-pub.example',
+  const projects = ['.ranks.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
     '.open-inventory.example', '.grid-game.example'];
   let currentExample = 0;
   let checkProject = 0;
