@@ -71,11 +71,11 @@
       $('.ranks.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
     } else if (currentExample !== projects.length - 1) {
-      $(projects[currentExample]).animate({ left: '150%', width: '100%', height: 'auto' }, 1000);
+      $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
       $(projects[currentExample + 1]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       currentExample += 1;
     } else if (currentExample === projects.length - 1) {
-      $(projects[currentExample]).animate({ left: '150%', width: '100%', height: 'auto' }, 1000);
+      $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
       currentExample = 0;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }
@@ -87,11 +87,11 @@
       $('.ranks.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
     } else if (currentExample !== 0) {
-      $(projects[currentExample]).animate({ left: '150%', width: '100%', height: 'auto' }, 1000);
+      $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
       $(projects[currentExample - 1]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       currentExample -= 1;
     } else if (currentExample === 0) {
-      $(projects[currentExample]).animate({ left: '150%', width: '100%', height: 'auto' }, 1000);
+      $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
       currentExample = projects.length - 1;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }

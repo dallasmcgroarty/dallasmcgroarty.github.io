@@ -4,7 +4,7 @@ body {
     -ms-overflow-style: none;
     /* overflow-x: hidden, fixes projects showing up on right side of screen
     and users being able to scroll/swipe to see it */
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body::-webkit-scrollbar { 
@@ -217,7 +217,7 @@ i{
     position: absolute;
     margin: 0;
     top: 45%;
-    left: 150%;
+    left: 200%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box; 
@@ -537,6 +537,14 @@ Animations / transitions
         Project images, text, wrappers css
       ****/
 
+    .next-btn.arrow {
+        right: 10px;
+    }
+    
+    .back-btn.arrow {
+        left: 10px;
+    }
+
     .ranks.example {
         /* visibility: hidden;  */
         position: absolute;
@@ -552,6 +560,7 @@ Animations / transitions
         top: 50%;
         width: '100%';
         height: 'auto';
+        margin: auto 0;
     }
     
     /*****
