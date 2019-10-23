@@ -21,6 +21,8 @@
   let currentExample = 0;
   let checkProject = 0;
 
+  let membersIndex = 1;
+
   // scroll to home
   $('.home-btn.nav').click(function () {
     $('html,body').animate({
@@ -95,5 +97,27 @@
       currentExample = projects.length - 1;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }
+  });
+
+  /**********
+   * project image slide shows
+   *
+   * ********** */
+
+  // members only slide show
+  $('#member-next').click(function (e) {
+    if (membersIndex === 6) {
+      membersIndex = 0;
+    }
+    membersIndex += 1;
+    document.getElementById('members-only-image').src = 'images/member' + String(membersIndex) + '.PNG';
+  });
+
+  $('#member-prev').click(function (e) {
+    if (membersIndex === 1) {
+      membersIndex = 7;
+    }
+    membersIndex -= 1;
+    document.getElementById('members-only-image').src = 'images/member' + String(membersIndex) + '.PNG';
   });
 })();

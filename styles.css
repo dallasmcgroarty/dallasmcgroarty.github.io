@@ -240,9 +240,9 @@ i{
     margin-left: 50px;
 }
 
-#ranks-image {
+#ranks-gif {
     height: auto;
-    max-width: 80%;
+    max-width: 100%;
     width: auto;
     max-height: 600px;
     border-radius: 5px;
@@ -638,7 +638,7 @@ Animations / transitions
         margin-bottom: 50px;
     }
 
-    #ranks-image {
+    #ranks-gif {
         width: 35%;
     }
 
