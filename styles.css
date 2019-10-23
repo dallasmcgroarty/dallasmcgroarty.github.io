@@ -252,7 +252,7 @@ i{
 .project-image {
     height: auto;
     width: auto;
-    max-width: 70%;
+    max-width: 80%;
     max-height: 400px;
     width: 700px;
     border-radius: 3px;
@@ -465,7 +465,7 @@ Animations / transitions
     }
 
     #projects {
-        max-width: 375px;
+        max-width: 500px;
     }
 
     #bg-projects {
@@ -479,6 +479,7 @@ Animations / transitions
         max-height: 105vh;
         height: auto;
         width: auto;
+        transform: translate( -45%, 0%);
     }
 
     /*****
@@ -595,7 +596,7 @@ Animations / transitions
     }
 
     .robo-friends.description {
-        margin-bottom: 55px;
+        margin-bottom: 100px;
     }
 
     /*****
@@ -640,10 +641,11 @@ Animations / transitions
 
     #ranks-gif {
         width: 35%;
+        max-height: 250px;
     }
 
     .project-image {
-        width: 100%;
+        max-width: 70%;
     }
 
     i{

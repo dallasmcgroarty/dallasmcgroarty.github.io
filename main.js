@@ -21,7 +21,10 @@
   let currentExample = 0;
   let checkProject = 0;
 
+  // globals for slide show indexes
   let membersIndex = 1;
+  let tuffyIndex = 1;
+  let openIndex = 1;
 
   // scroll to home
   $('.home-btn.nav').click(function () {
@@ -104,6 +107,7 @@
    *
    * ********** */
 
+  // can use dry here to shrink code
   // members only slide show
   $('#member-next').click(function (e) {
     if (membersIndex === 6) {
@@ -119,5 +123,39 @@
     }
     membersIndex -= 1;
     document.getElementById('members-only-image').src = 'images/member' + String(membersIndex) + '.PNG';
+  });
+
+  // tuffypub slide show
+  $('#tuffy-next').click(function (e) {
+    if (tuffyIndex === 4) {
+      tuffyIndex = 0;
+    }
+    tuffyIndex += 1;
+    document.getElementById('tuffypub-image').src = 'images/tuffy' + String(tuffyIndex) + '.PNG';
+  });
+
+  $('#tuffy-prev').click(function (e) {
+    if (tuffyIndex === 1) {
+      tuffyIndex = 5;
+    }
+    tuffyIndex -= 1;
+    document.getElementById('tuffypub-image').src = 'images/tuffy' + String(tuffyIndex) + '.PNG';
+  });
+
+  // open inventory slide show
+  $('#open-next').click(function (e) {
+    if (openIndex === 5) {
+      openIndex = 0;
+    }
+    openIndex += 1;
+    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.PNG';
+  });
+
+  $('#open-prev').click(function (e) {
+    if (openIndex === 1) {
+      openIndex = 6;
+    }
+    openIndex -= 1;
+    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.PNG';
   });
 })();
