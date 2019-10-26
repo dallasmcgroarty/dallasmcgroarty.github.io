@@ -64,6 +64,19 @@
     'slow');
   });
 
+  // slide in first project example if user scrolls
+  // to the project element
+  $(window).on('scroll', function() {
+    var elPos = $('#projects').offset().top;
+    var yPos = window.pageYOffset;
+
+    if(yPos > elPos) {
+      if (checkProject === 0) {
+        $('.ranks.example').animate({ left: '50%' }, 1000);
+        checkProject = 1;
+      }
+    }
+});
   for (let i = 0; i < projects.length; i++) {
     $(projects[i]).css('width', '100%');
   }
