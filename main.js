@@ -156,12 +156,13 @@
   });
 
   // open inventory slide show
+  // .PNG needs to be lower case on github i guess
   $('#open-next').click(function (e) {
     if (openIndex === 5) {
       openIndex = 0;
     }
     openIndex += 1;
-    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.PNG';
+    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.png';
   });
 
   $('#open-prev').click(function (e) {
@@ -169,6 +170,6 @@
       openIndex = 6;
     }
     openIndex -= 1;
-    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.PNG';
+    document.getElementById('open-inventory-image').src = 'images/open' + String(openIndex) + '.png';
   });
 })();
