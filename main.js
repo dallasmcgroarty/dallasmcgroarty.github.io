@@ -16,7 +16,7 @@
   // }, 500);
 
   // project example class names
-  const projects = ['.ranks.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
+  const projects = ['.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
     '.open-inventory.example', '.grid-game.example'];
   let currentExample = 0;
   let checkProject = 0;
@@ -66,17 +66,17 @@
 
   // slide in first project example if user scrolls
   // to the project element
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     var elPos = $('#projects').offset().top;
     var yPos = window.pageYOffset;
 
-    if(yPos > elPos) {
+    if (yPos > elPos) {
       if (checkProject === 0) {
         $('.ranks.example').animate({ left: '50%' }, 1000);
         checkProject = 1;
       }
     }
-});
+  });
   for (let i = 0; i < projects.length; i++) {
     $(projects[i]).css('width', '100%');
   }
