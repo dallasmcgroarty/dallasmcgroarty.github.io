@@ -13,6 +13,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content= "user-scalable=no, width=device-width, initial-scale=1.0">
   <title>Dallas McGroarty</title>
+  <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -58,7 +59,27 @@
         </div>
         <button type="button" class="next-btn arrow"><i class="right"></i></button>
         <button type="button" class="back-btn arrow"><i class="left"></i></button>
-        <!-- Ranks project first to show -->
+        <!-- Boogle project first to show-->
+        <div class="boogle example">
+            <div class="boogle wrapper">
+                <div class="boogle image-wrapper">
+                    <img src="images/booglegif.gif" id="boogle-image" class="project-image">
+                </div>
+                <div class="boogle description">
+                    <h1 class="project-title" style="text-align: center;">Boogle</h1>
+                    <p class="project-text" style="text-align: center;">
+                        Boogle is a Google search engine clone. Created using a LAMP stack along with Javascript/Jquery. Boogle allows the user to search for a term 
+                        in the search bar. Boogle then retrieves the data of websites from the database that matches the term and displays it 
+                        similar to how google does. Users may also search for images related to the search term. A PHP web crawler script 
+                        is used to crawl the web for website information and stores it in the MySQL database.
+                    </p>
+                    <a href="https://github.com/dallasmcgroarty/boogle" target="_blank" id="git-link"> 
+                        <img src="images/github.png" id="project-github-only" style="max-width: 64px; max-height: 64px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Ranks project -->
         <div class="ranks example">
             <div class="ranks wrapper">
                 <div class="image-wrapper" id="ranks-image-wrap">
@@ -223,6 +244,7 @@
             <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link" style="font-size: 40px;">Download Resume</a>
         </div>
     </div>
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
     <script src="main.js"></script>
 </body>
 </html>

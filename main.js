@@ -16,7 +16,7 @@
   // }, 500);
 
   // project example class names
-  const projects = ['.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
+  const projects = ['.boogle.example', '.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
     '.open-inventory.example', '.grid-game.example'];
   let currentExample = 0;
   let checkProject = 0;
@@ -53,7 +53,7 @@
       scrollTop: $('#projects').offset().top },
     'slow');
     if (checkProject === 0) {
-      $('.ranks.example').animate({ left: '50%' }, 1000);
+      $('.boogle.example').animate({ left: '50%' }, 1000);
       checkProject = 1;
     }
   });
@@ -72,7 +72,7 @@
 
     if (yPos > elPos) {
       if (checkProject === 0) {
-        $('.ranks.example').animate({ left: '50%' }, 1000);
+        $('.boogle.example').animate({ left: '50%' }, 1000);
         checkProject = 1;
       }
     }
@@ -86,7 +86,7 @@
   // Go to next example function
   $('.next-btn.arrow').click(function () {
     if (checkProject === 0) {
-      $('.ranks.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
+      $('.boogle.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
     } else if (currentExample !== projects.length - 1) {
       $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
@@ -102,7 +102,7 @@
   // go to previous exmaple on back button press
   $('.back-btn.arrow').click(function () {
     if (checkProject === 0) {
-      $('.ranks.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
+      $('.boogle.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
     } else if (currentExample !== 0) {
       $(projects[currentExample]).animate({ left: '200%', width: '100%', height: 'auto' }, 1000);
