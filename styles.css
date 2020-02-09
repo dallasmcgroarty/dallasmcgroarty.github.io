@@ -329,8 +329,18 @@ i{
     cursor: pointer;
 }
 
+#git-link-only {
+    display: flex;
+    transition: .2s ease-in-out;
+    width: auto;
+    width: 5vw;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
 #project-github-only{
-    display: block;
+    display: flex;
     transition: .2s ease-in-out;
     width: auto;
     width: 5vw;
