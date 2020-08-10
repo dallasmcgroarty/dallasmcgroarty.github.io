@@ -16,7 +16,7 @@
   // }, 500);
 
   // project example class names
-  const projects = ['.boogle.example', '.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
+  const projects = ['.boogle.example', '.getitdun.example', '.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
     '.open-inventory.example'];
   let currentExample = 0;
   let checkProject = 0;
