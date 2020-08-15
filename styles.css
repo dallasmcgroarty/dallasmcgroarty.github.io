@@ -381,6 +381,7 @@ Resume CSS
 
 #resume-link {
     color:black;
+    font-size: 76px;
     font-family: 'Bangers', cursive;
     text-decoration: none;
     position: absolute;
@@ -520,7 +521,7 @@ Animations / transitions
     }
 
     #about {
-        font-size: 20px;
+        font-size: 18px;
         color: white;
         padding-right: 5px;
         padding-left: 5px;
@@ -691,5 +692,9 @@ Animations / transitions
 
     #project-github, #project-github-only {
         width: 30%;
+    }
+
+    #resume-link {
+        font-size: 50px;
     }
 }
