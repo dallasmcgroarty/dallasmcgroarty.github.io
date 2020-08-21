@@ -575,6 +575,10 @@ Animations / transitions
         margin: auto 0;
     }
     
+    .open-inventory.example {
+        top: 53%;
+    }
+
     /*****
         Project descriptions css
       ****/
@@ -649,8 +653,20 @@ Animations / transitions
         width: 20%;
     }
 
-    #project-github, #project-github-only {
+    #project-github {
         width: 30%;
+    }
+
+    #git-link-only {
+        width: 64px;
+        height: 64px;
+        display: block;
+        text-align: center;
+    }
+
+    #project-github-only {
+        width: 64px;
+        height: 64px;
     }
 
     #resume-link {
