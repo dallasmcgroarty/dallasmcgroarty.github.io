@@ -16,7 +16,7 @@
   // }, 500);
 
   // project example class names
-  const projects = ['.boogle.example', '.getitdun.example', '.ranks.example', '.face-recognition.example', '.members-only.example', '.robo-friends.example', '.tuffy-pub.example',
+  const projects = ['.boogle.example', '.getitdun.example', '.devconnector.example', '.ranks.example', '.face-recognition.example', '.members-only.example', '.tuffy-pub.example',
     '.open-inventory.example'];
   let currentExample = 0;
   let checkProject = 0;
@@ -25,6 +25,7 @@
   let membersIndex = 1;
   let tuffyIndex = 1;
   let openIndex = 1;
+  let devIndex = 1;
 
   // scroll to home
   $('.home-btn.nav').click(function () {
@@ -121,6 +122,24 @@
    * ********** */
 
   // can use dry here to shrink code
+
+   // devconnector slide show
+   $('#dev-next').click(function (e) {
+    if (devIndex === 4) {
+      devIndex = 0;
+    }
+    devIndex += 1;
+    document.getElementById('devconnector-image').src = 'images/devconnector' + String(devIndex) + '.PNG';
+  });
+
+  $('#dev-prev').click(function (e) {
+    if (devIndex === 1) {
+      devIndex = 5;
+    }
+    devIndex -= 1;
+    document.getElementById('devconnector-image').src = 'images/devconnector' + String(devIndex) + '.PNG';
+  });
+
   // members only slide show
   $('#member-next').click(function (e) {
     if (membersIndex === 6) {
