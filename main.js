@@ -85,7 +85,7 @@
   // slide in from right to left, looping through project examples
   // simple counter and array to hold div class names
   // Go to next example function
-  $('.next-btn.arrow').click(function () {
+  $('.next-btn.arrow').click(function (e) {
     if (checkProject === 0) {
       $('.boogle.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
@@ -98,10 +98,16 @@
       currentExample = 0;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }
+    // timeout button so user cant spam slide show
+    e.target.parentNode.disabled = true;
+    setTimeout(function(){
+      e.target.parentNode.disabled = false;
+    },1000)
+
   });
 
   // go to previous exmaple on back button press
-  $('.back-btn.arrow').click(function () {
+  $('.back-btn.arrow').click(function (e) {
     if (checkProject === 0) {
       $('.boogle.example').animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
       checkProject = 1;
@@ -114,6 +120,12 @@
       currentExample = projects.length - 1;
       $(projects[currentExample]).animate({ left: '50%', width: '100%', height: 'auto' }, 1000);
     }
+    // timeout button so user cant spam slide show
+    e.target.parentNode.disabled = true;
+    setTimeout(function(){
+      e.target.parentNode.disabled = false;
+    },1000)
+
   });
 
   /**********
