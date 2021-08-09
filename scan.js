@@ -16,7 +16,13 @@ function startScan() {
         "upc_reader",
         "upc_e_reader",
       ]
-    }
+    },
+    area: {
+      top: "40%",
+      right: "20%",
+      left: "20%",
+      bottom: "40%"
+    },
   }, function(err) {
       if (err) {
           console.log(err);
