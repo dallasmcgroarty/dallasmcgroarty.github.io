@@ -1,5 +1,6 @@
 var btn = document.getElementById('start-scan');
 var span = document.getElementById('decoded-value');
+var video = document.getElementById('scan-container');
 var isScanOn = false;
 
 function startScan() {
@@ -7,7 +8,7 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: document.getElementById('scan-container')
+      target: video
     },
     decoder : {
       readers : ["code_128_reader"]
@@ -35,6 +36,7 @@ Quagga.onDetected(function(result) {
     var code = result.codeResult.code;
     span.textContent = code;
     console.log(code);
+    video.style.display = 'none';
     Quagga.stop();
 });
 
