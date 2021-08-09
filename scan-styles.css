@@ -25,3 +25,9 @@ button {
     font-size: 16px;
     background-color: bisque;
 }
+
+video {
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 999;
+}
