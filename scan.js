@@ -1,6 +1,7 @@
 var btn = document.getElementById('start-scan');
 var span = document.getElementById('decoded-value');
 var video = document.getElementById('scan-container');
+var text = document.querySelector('.info');
 var isScanOn = false;
 
 function startScan() {
@@ -8,13 +9,7 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: video,
-      constraints: {
-        width: {min: 640},
-        height: {min: 480},
-        aspectRatio: {min: 1, max: 100},
-        facingMode: "environment"
-      }
+      target: video
     },
     decoder : {
       readers : [
@@ -51,7 +46,10 @@ btn.addEventListener('click', function (e) {
 
 Quagga.onDetected(function(result) {
     var code = result.codeResult.code;
+  
     span.textContent = code;
+    text.textContent = result.codeResult;
+  
     console.log(code);
   
     Quagga.stop();
