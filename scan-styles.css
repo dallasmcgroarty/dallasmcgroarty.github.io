@@ -36,3 +36,9 @@ video {
     top: 0;
     left: 0;
 }
+
+p {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
