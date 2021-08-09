@@ -15,7 +15,13 @@ function startScan() {
         "code_128_reader",
         "upc_reader",
         "upc_e_reader",
-      ]
+      ],
+      debug: {
+        drawBoundingBox: false,
+        showFrequency: false,
+        drawScanline: false,
+        showPattern: false
+      }
     }
   }, function(err) {
       if (err) {
