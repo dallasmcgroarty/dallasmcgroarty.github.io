@@ -17,10 +17,10 @@ function startScan() {
         "upc_e_reader",
       ],
       debug: {
-        drawBoundingBox: false,
-        showFrequency: false,
-        drawScanline: false,
-        showPattern: false
+        drawBoundingBox: true,
+        showFrequency: true,
+        drawScanline: true,
+        showPattern: true
       }
     }
   }, function(err) {
