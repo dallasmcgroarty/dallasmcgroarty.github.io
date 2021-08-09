@@ -11,7 +11,11 @@ function startScan() {
       target: video
     },
     decoder : {
-      readers : ["code_128_reader"]
+      readers : [
+        "code_128_reader",
+        "upc_reader",
+        "upc_e_reader",
+      ]
     }
   }, function(err) {
       if (err) {
