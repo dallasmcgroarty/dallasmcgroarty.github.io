@@ -48,7 +48,7 @@ Quagga.onDetected(function(result) {
     var code = result.codeResult.code;
   
     span.textContent = code;
-    text.textContent = result.codeResult;
+    text.textContent = JSON.stringify(result.codeResult);
   
     console.log(code);
   
