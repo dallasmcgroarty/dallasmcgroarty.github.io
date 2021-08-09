@@ -1,0 +1,27 @@
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+span {
+    min-width: 120px;
+    width: 120px;
+    height: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: bisque;
+}
