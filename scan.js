@@ -8,7 +8,13 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: video
+      target: video,
+      constraints: {
+        width: {min: 640},
+        height: {min: 480},
+        aspectRatio: {min: 1, max: 100},
+        facingMode: "environment"
+      }
     },
     decoder : {
       readers : [
@@ -17,18 +23,17 @@ function startScan() {
         "upc_e_reader",
       ]
     },
-    area: {
-      top: "40%",
-      right: "20%",
-      left: "20%",
-      bottom: "40%"
+    locator: {
+      patchSize: "medium",
+      halfSample: true
     },
+    locate: true
   }, function(err) {
       if (err) {
           console.log(err);
           return
       }
-      console.log("Initialization finished. Ready to start");
+
       Quagga.start();
       scanRunning = true;
   });
