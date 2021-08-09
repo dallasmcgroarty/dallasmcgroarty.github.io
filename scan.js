@@ -7,7 +7,7 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: document.querySelector('body')
+      target: document.getElementById('scan-container')
     },
     decoder : {
       readers : ["code_128_reader"]
