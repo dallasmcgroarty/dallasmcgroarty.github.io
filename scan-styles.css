@@ -27,8 +27,9 @@ button {
 }
 
 video {
-    min-width: 100vw;
-    min-height: 100vh;
+    height: auto;
+    width: 100%;
     z-index: 999;
     position: absolute;
+    top: 0;
 }
