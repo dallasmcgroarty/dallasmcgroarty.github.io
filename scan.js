@@ -30,13 +30,23 @@ btn.addEventListener('click', function (e) {
   } else {
     startScan();
   }
+  
+  hideShowCamera();
 });
 
 Quagga.onDetected(function(result) {
     var code = result.codeResult.code;
     span.textContent = code;
     console.log(code);
-    video.style.display = 'none';
+  
     Quagga.stop();
+    hideShowCamera();
 });
 
+function hideShowCamera() {
+  if (video.style.display == 'none') {
+    video.style.display = 'block';
+  } else {
+    video.style.display = 'none';
+  }
+}
