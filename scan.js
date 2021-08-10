@@ -22,7 +22,13 @@ function startScan() {
         "code_128_reader",
         "upc_reader",
         "upc_e_reader",
-      ]
+      ],
+      debug: {
+        drawBoundingBox: true,
+        showFrequency: true,
+        drawScanline: true,
+        showPattern: true
+      }
     },
     locator: {
       patchSize: "medium",
