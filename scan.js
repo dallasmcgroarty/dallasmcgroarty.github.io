@@ -65,7 +65,7 @@ Quagga.onDetected(function(result) {
     span.textContent = code;
   
     text.style.display = 'block';
-    text.textContent = JSON.stringify(result);
+    text.textContent = 'Format: ' + result.codeResult.format;
   
     console.log(code);
   
