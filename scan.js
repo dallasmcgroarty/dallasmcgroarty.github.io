@@ -9,13 +9,7 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: video,
-      area: {
-        top: "40%",
-        right: "20%",
-        left: "20%",
-        bottom: "40%"
-      }
+      target: video
     },
     decoder : {
       readers : [
@@ -27,7 +21,8 @@ function startScan() {
         drawBoundingBox: true,
         showFrequency: true,
         drawScanline: true,
-        showPattern: true
+        showPattern: true,
+        showCanvas: false,
       }
     },
     locator: {
