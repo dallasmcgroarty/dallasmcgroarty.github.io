@@ -9,7 +9,13 @@ function startScan() {
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: video
+      target: video,
+      area: {
+        top: "40%",
+        right: "20%",
+        left: "20%",
+        bottom: "40%"
+      }
     },
     decoder : {
       readers : [
