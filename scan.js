@@ -54,9 +54,9 @@ btn.addEventListener('click', function (e) {
     Quagga.stop()
   } else {
     startScan();
+    text.style.display = 'none';
+    video.style.display = 'block';
   }
-  
-  video.style.display = 'block';
 });
 
 Quagga.onDetected(function(result) {
