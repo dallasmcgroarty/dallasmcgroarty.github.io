@@ -30,11 +30,11 @@ button {
 }
 
 video {
+    display: block;
     height: auto !important;
     width: 100% !important;
     position: absolute;
-    top: 0;
-    left: 0;
+    margin: auto;
 }
 
 p {
