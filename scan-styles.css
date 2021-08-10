@@ -30,11 +30,13 @@ button {
 }
 
 video {
+    transform: translate(-50%, -50%);
     display: block;
     height: auto !important;
     width: 100% !important;
     position: absolute;
-    margin: auto;
+    top: 50%;
+    left: 50%;
 }
 
 p {
