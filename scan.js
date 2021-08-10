@@ -22,14 +22,7 @@ function startScan() {
         "code_39_vin_reader",
         "codabar_reader",
         "i2of5_reader"
-      ],
-      debug: {
-        drawBoundingBox: true,
-        showFrequency: true,
-        drawScanline: true,
-        showPattern: true,
-        showCanvas: true,
-      }
+      ]
     },
     locator: {
       patchSize: "medium",
