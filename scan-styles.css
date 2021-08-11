@@ -51,10 +51,10 @@ p {
 }
 
 #focus-box {
-    top: 42%;
-    bottom: 42%;
-    left: 20%;
-    right: 20%;
+    top: 40%;
+    bottom: 40%;
+    left: 15%;
+    right: 15%;
     border: 1px solid rgb(66, 132, 255);
     position: absolute;
     z-index: 999;
