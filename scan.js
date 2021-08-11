@@ -15,10 +15,10 @@ function startScan() {
         facingMode: "environment"
       },
       area: {
-        top: "42%",
-        right: "20%",
-        left: "20%",
-        bottom: "42%"
+        top: "40%",
+        right: "15%",
+        left: "15%",
+        bottom: "40%"
       }
     },
     decoder : {
