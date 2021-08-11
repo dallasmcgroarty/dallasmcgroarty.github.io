@@ -2,6 +2,7 @@ var btn = document.getElementById('start-scan');
 var span = document.getElementById('decoded-value');
 var video = document.getElementById('scan-container');
 var text = document.querySelector('.info');
+var focusBox = document.getElementById('focus-box');
 var isScanOn = false;
 
 function startScan() {
@@ -14,10 +15,10 @@ function startScan() {
         facingMode: "environment"
       },
       area: {
-        top: "0%",
-        right: "0%",
-        left: "0%",
-        bottom: "0%"
+        top: "42%",
+        right: "20%",
+        left: "20%",
+        bottom: "42%"
       }
     },
     decoder : {
@@ -56,6 +57,7 @@ btn.addEventListener('click', function (e) {
     startScan();
     text.style.display = 'none';
     video.style.display = 'block';
+    focusBox.style.display = 'block';
   }
 });
 
@@ -71,4 +73,5 @@ Quagga.onDetected(function(result) {
   
     Quagga.stop();
     video.style.display = 'none';
+  focusBox.style.display = 'none';
 });
