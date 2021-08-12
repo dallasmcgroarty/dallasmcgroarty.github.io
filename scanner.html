@@ -2,19 +2,21 @@
 <html>
     <head>
         <meta name="viewport" content= "user-scalable=no, width=device-width, initial-scale=1.0" />
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>-->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script> -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@ericblade/quagga2/dist/quagga.min.js"></script>
         <link rel="stylesheet" href="scan-styles.css" />
     </head>
     <body>
         <div class="wrapper">
             <div id="scan-container">
+                <span id="close-scan">&#10060</span>
                 <div id="focus-box"></div>
             </div>
             <span id="decoded-value"></span>
+            <p id="info"></p>
             <button type="button" id="start-scan">Scan Barcode</button>
+            <button type="button" id="start-qr-scan">Scan QR code</button>
         </div>
-        <p class="info"></p>
         <script src="scan.js"></script>
     </body>
 </html>
