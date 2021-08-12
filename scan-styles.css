@@ -3,22 +3,22 @@ body {
 }
 
 .wrapper {
+    margin-top: 30%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    min-height: 100vh;
+    flex-direction: column;
 }
 
-span {
+#decoded-value {
     min-width: 120px;
-    width: 120px;
+    width: fit-content;
+    max-width: 90%;
     height: 20px;
     overflow-x: auto;
     padding: 10px;
     border: 1px solid black;
     font-size: 16px;
-    margin-right: 20px;
+    margin-bottom: 14px;
 }
 
 button {
@@ -27,30 +27,27 @@ button {
     border-radius: 6px;
     font-size: 16px;
     background-color: bisque;
+    margin-bottom: 14px;
 }
 
 video {
     transform: translate(-50%, -50%);
     display: block;
-    height: auto !important;
-    width: 100% !important;
+    /* height: auto !important;
+    width: 100% !important; */
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
-p {
-    top: 68%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+#info {
     font-size: 16px;
     text-align: center;
-    padding: 20px;
+    margin: 0 0 14px;
     display: none;
 }
 
-#focus-box {
+/* #focus-box {
     top: 40%;
     bottom: 40%;
     left: 15%;
@@ -60,4 +57,23 @@ p {
     z-index: 999;
     display: none;
     box-shadow:0 0 0 1600px rgba(0,0,0,0.35);
+} */
+
+#close-scan {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    z-index: 999;
+    padding: 8px;
+    display: none;
+}
+
+#close-scan:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+    video {
+        width: 100%;
+    }
 }
