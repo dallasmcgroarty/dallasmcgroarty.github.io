@@ -68,7 +68,7 @@
   // slide in first project example if user scrolls
   // to the project element
   $(window).on('scroll', function () {
-    var elPos = $('#projects').offset().top;
+    var elPos = $('#projects').offset().top - 500;
     var yPos = window.pageYOffset;
 
     if (yPos > elPos) {

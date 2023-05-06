@@ -145,7 +145,7 @@ Home page CSS
 */
 #linkedin:hover, #github:hover, .nav:hover, .arrow:hover, 
 #project-github:hover, #project-site:hover, #project-github-only:hover {
-    transform: scale(1.5)
+    transform: scale(1.25);
 }
 
 /****
@@ -614,7 +614,7 @@ Animations / transitions
     }
 
     #ranks-gif {
-        width: 35%;
+        width: 100%;
         max-height: 250px;
     }
 
