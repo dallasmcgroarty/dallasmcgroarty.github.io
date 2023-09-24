@@ -179,7 +179,6 @@ p {
 #project-github {
     transition: .2s ease-in-out;
     width: auto;
-    width: 5vw;
     height: auto;
     cursor: pointer;
 }
@@ -187,8 +186,6 @@ p {
 #git-link-only {
     display: flex;
     transition: .2s ease-in-out;
-    width: auto;
-    width: 5vw;
     height: auto;
     cursor: pointer;
 }
@@ -196,15 +193,12 @@ p {
 #project-github-only {
     display: flex;
     transition: .2s ease-in-out;
-    width: auto;
-    width: 5vw;
     height: auto;
     cursor: pointer;
 }
 
 #project-site {
     width: auto;
-    width: 4vw;
     height: auto;
     transition: .2s ease-in-out;
     cursor: pointer;
