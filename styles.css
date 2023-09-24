@@ -1,243 +1,228 @@
+/***********************
+    globals / General
+**********************/
+* {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-    /* overflow-x: hidden, fixes projects showing up on right side of screen
-    and users being able to scroll/swipe to see it */
-    overflow-x: hidden !important;
 }
 
-body::-webkit-scrollbar { 
-    display: none; 
-} 
+p {
+    margin: 0;
+}
 
-/****
+.flex {
+    display: flex;
+}
 
-Home page CSS
+.flex-50 {
+    flex: 0 0 50%;
+}
 
-******/
-#bg-home {
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jce {
+    justify-content: flex-end;
+}
+
+.jcs {
+    justify-content: flex-start;
+}
+
+.aic {
+    align-items: center;
+}
+
+.aie {
+    align-items: flex-end;
+}
+
+.ais {
+    align-items: flex-start;
+}
+
+.section {
+    height: 100vh;
     width: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: -33px;
+    padding: 100px 20px
 }
-#home {
-    position: relative;
+
+.box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    max-width: 650px;
+    border-radius: 6px;
+}
+
+.heading {
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
 }
 
-.nav-bar {
-    position: -webkit-sticky; /* Safari */
+/***********************
+    Navbar
+**********************/
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
     position: sticky;
-    margin-right: 50px;
-    top: 50px;
-    text-align: right;
-    background-color: transparent;
-    z-index: 1;
+    position: -webkit-sticky;
+    top: 0px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    transition: all 0.4s;
+    z-index: 999;
 }
 
-.nav {
-    margin-right: 15px;
-    border-radius: 4px;
+.navbar:hover {
+    background-color: black;
+}
+
+.navbar:hover .navbar-item {
+    color: white;
+}
+
+.navbar:hover .nav-logo {
+    border: 2px solid white;
+}
+
+.navbar:hover .nav-logo__text {
+    color: white;
+}
+
+.navbar-item {
     border: none;
     background-color: transparent;
-    color: white;
-    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-logo {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+
+}
+
+.nav-logo__text {
+    font-size: 22px;
+}
+
+/***********************
+    About
+**********************/
+#about.section {
+    background: linear-gradient(
+        to right,
+        black 0%,
+        black 50%,
+        white 50%,
+        white 100%
+    );
+}
+
+#about p {
     font-size: 20px;
-    font-size: 1vw;
+    margin-bottom: 20px;
+}
+
+#about .about-right {
+    padding-left: 20px;
+}
+
+#about .about-name {
+    color: white;
+    font-size: 46px;
+}
+
+#about .about-title {
+    color: white;
+    font-size: 28px;
+}
+
+.port-links {
+    gap: 20px;
+}
+
+/***********************
+    Projects
+**********************/
+
+#projects {
+    height: auto;
+    /* background-image: url('/bg/clouds.jpg'); */
+    background-color: aliceblue;
+}
+
+#project-github {
+    transition: .2s ease-in-out;
+    width: auto;
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+}
+
+#git-link-only {
+    display: flex;
+    transition: .2s ease-in-out;
+    width: auto;
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+}
+
+#project-github-only {
+    display: flex;
+    transition: .2s ease-in-out;
+    width: auto;
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+}
+
+#project-site {
+    width: auto;
+    width: 4vw;
+    height: auto;
     transition: .2s ease-in-out;
     cursor: pointer;
 }
 
-.nav:focus {
-    outline: none;
-    color: grey;
-}
-
-.home-btn.nav:active, .projects-btn.nav:active, .resume-btn.nav:active, .about-btn.nav:active {
-    transform: translateY(4px);
-}
-
-#wrapper {
-   position: relative;
-}
-
-#title-name {
-    font-family: 'Bangers', cursive;
-    font-size: 80px;
-    font-size: 5vw;
-    text-align: center;
-    margin: 0;
-    transition: .2s ease-in-out;
-    transform-origin: right;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-#title-name:hover {
-    transform: scale(1.05) translate(-45%, -50%);
-}
-
-#sub-title {
-    font-family: 'Acme', sans-serif;
-    font-size: 20px;
-    font-size: 2vw;
-    text-align: center;
-    margin: 0;
-    transition: .2s ease-in-out;
-    transform-origin: right;
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-#sub-title:hover {
-    transform: scale(1.05) translate(-45%, -50%);
-}
-
-#about {
-    display: none;
-    text-align: center;
-    color: white;
-    margin: 0;
-    position: absolute;
-    width: 50%;
-    font-size: 25px;
-    top: 35%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.port-links {
-    position: absolute;
-    text-align: center;
-    margin: 0;
-    top: 48%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-#linkedin {
-    width: auto;
-    width: 7vw;
-    height: auto;
-    transition: .2s ease-in-out;
-}
-
-#github {
-    margin-bottom: 5px;
-    width: auto;
-    width: 5vw;
-    height: auto;
-    transition: .2s ease-in-out;
+#linkedin, #github {
+    transition: all 0.3s;
 }
 
 /***** 1.5 scaled hovers 
 */
 #linkedin:hover, #github:hover, .nav:hover, .arrow:hover, 
 #project-github:hover, #project-site:hover, #project-github-only:hover {
-    transform: scale(1.25);
-}
-
-/****
-
-Projects CSS
-
-******/
-
-#projects {
-    position: relative;
-}
-
-#bg-projects{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: -4px;
-    margin-bottom: -4px;
-}
-
-i{
-    border: solid black;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 15px;
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-.left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-.next-btn.arrow {
-    z-index: 25;
-    background-color: transparent;
-    border-style: none;
-    position: absolute;
-    right: 20px;
-    top: 45%;
-    transition: .2s ease-in-out;
-}
-
-.back-btn.arrow {
-    z-index: 25;
-    background-color: transparent;
-    border-style: none;
-    position: absolute;
-    left: 20px;
-    top: 45%;
-    transition: .2s ease-in-out;
-}
-
-.arrow {
-    cursor: pointer;
-}
-
-.arrow:focus {
-    outline: none;
+    transform: scale(1.20);
 }
 
 .example {
-    /* visibility: hidden;  */
-    position: absolute;
-    margin: 0;
-    top: 45%;
-    left: 200%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box; 
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.image-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#ranks-image-wrap {
-    margin-right: 100px;
-    margin-left: 50px;
+    padding: 4px;
 }
 
 #ranks-gif {
@@ -251,425 +236,184 @@ i{
 
 .project-image {
     height: auto;
-    width: auto;
-    max-width: 80%;
+    width: 100%;
+    /* max-width: 80%;
     max-height: 400px;
-    width: 700px;
+    width: 700px; */
     border-radius: 3px;
     margin: 0;
     transition: .2s ease-in-out;
 }
 
-.project-image:hover {
-    transform: scale(1.05)
-}
-
-.next-image.arrow {
-    background-color: transparent;
-    border-style: none;
-    transition: .2s ease-in-out;
-    height: auto;
-    width: auto;
-    min-height: 50px;
-    margin-left: 10px;
-
-}
-
-.prev-image.arrow {
-    background-color: transparent;
-    border-style: none;
-    transition: .2s ease-in-out;
-    height: auto;
-    width: auto;
-    min-height: 50px;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
 .description {
     position: relative;
     height: auto;
-    max-width: 40%;
-    margin-left: 50px;
-}
-
-.ranks.description {
-    margin-left: 150px;
-}
-
-.project-title{
-    font-family: 'Bangers', cursive;
-    font-weight: 10;
-    font-size: 50px;
-    transition: .2s ease-in-out;
-}
-
-.project-title:hover {
-    transform: scale(1.05)
-}
-
-.project-text{
-    font-family: 'Acme', sans-serif;
-    font-size: 25px;
-    font-size: 1.5vw;
-    transition: .2s ease-in-out;
-}
-
-.project-text:hover {
-    transform: scale(1.01)
-}
-
-#project-github {
-    position: absolute;
-    transition: .2s ease-in-out;
-    width: auto;
-    width: 5vw;
-    height: auto;
-    right: 50%;
-    cursor: pointer;
-}
-
-#git-link-only {
-    display: flex;
-    transition: .2s ease-in-out;
-    width: auto;
-    width: 5vw;
-    height: auto;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-#project-github-only{
-    display: flex;
-    transition: .2s ease-in-out;
-    width: auto;
-    width: 5vw;
-    height: auto;
-    margin: 0 auto;
-    cursor: pointer;
-}
-#project-site {
-    position: absolute;
-    width: auto;
-    width: 4vw;
-    height: auto;
-    transition: .2s ease-in-out;
-    left: 50%;
-    margin-left: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-/****
-
-Resume CSS
-
-******/
-
-#resume {
-    position: relative;
-}
-
-#bg-resume {
-    height: 100%;
     width: 100%;
-    background-size: cover;
-    -webkit-background-size: cover;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 6px; */
+}
+
+.desc-inner {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.project-title {
+    font-size: 24px;
+}
+
+.project-text {
+    font-family: 'Acme', sans-serif;
+    font-size: 18px;
+    max-width: 650px;
+}
+
+.project-links {
+    margin-top: 12px;
+}
+
+.example-inner {
+    gap: 30px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.slick-dots button {
+    display: none;
+}
+
+.slick-dots li.slick-active {
+    opacity: 1;
+}
+
+.slick-dots li {
+    margin-left: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.slick-dots li::marker {
+    font-size: 26px;
+}
+
+
+/***********************
+    Resume
+**********************/
+#resume {
+    height: 50vh;
+    background-image: url('/bg/field.jpg');
+    background-position: bottom;
     background-repeat: no-repeat;
-    margin-bottom: -5px;
+    background-size: cover;
 }
 
 #resume-link {
-    color:black;
-    font-size: 76px;
-    font-family: 'Bangers', cursive;
+    outline: none;
+    color: white;
+    background-color: #30363d;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 30px;
     text-decoration: none;
-    position: absolute;
-    margin: 0;
-    top: 45%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    transition: .2s ease-in-out;
-    cursor: pointer;
+    transition: all 0.3s;
 }
 
 #resume-link:hover {
-    transform: scale(1.2) translate(-43%, -50%);
+    transform: translateY(2px);
 }
 
-/*******
-Animations / transitions
-****/
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/***********************
+    Clients
+**********************/
+#clients {
+    height: auto;
 }
 
-#left{
-    left: -150%;
+#clients .client-slide {
+    display: flex;
+    width: fit-content;
 }
 
-#right{
-    left: 150%;
+#clients .clients-slider {
+    padding: 50px 0px;
 }
 
-#center{
-    left: 50%;
+#clients .clients-slider .slick-track {
+    display: flex;
+    align-items: center;
 }
 
-#slide-left {
-    -webkit-animation: slideInLeft 1s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slideInLeft 1s forwards;
-    animation-delay: 2s;
-}
-
-#slide-right {
-    -webkit-animation: slideOutRight 1s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slideOutRight 1s forwards;
-    animation-delay: 2s;
-}
-
-@-webkit-keyframes slideInLeft {
-    100% { left: 50%; }
-}
-
-@keyframes slideInLeft {
-    100% { left: 50%; }
-}
-
-@-webkit-keyframes slideOutRight {
-    100% { left: 150%; }
-}
-
-@keyframes slideOutRight {
-    100% { left: 150%; }
-}
-
-@-webkit-keyframes slideOutLeft {
-    100% { left: -150%; }
-}
-
-@keyframes slideOutLeft {
-    100% { left: -150%; }
-}
-
-@media only screen and (max-width: 768px) {
-
-    /*****
-        Background images
-    *****/
-
-    #bg-home {
-        max-height: 105vh;
-        height: auto;
-        width: auto;
-        transform: translate( -59%, 0%);
+/* Mobile */
+@media (max-width: 768px) {
+    /*******************
+        Nav
+    ******************/
+    .navbar {
+        padding: 20px !important;
+        justify-content: center;
     }
 
-    #projects {
-        max-width: 500px;
+    .nav-logo {
+        display: none;
     }
 
-    #bg-projects {
-        max-height: 105vh;
-        height: auto;
-        width: auto;
-        transform: translate( -50%, 0%);
+    .navbar-item {
+        padding: 1px 2px;
     }
 
-    #bg-resume {
-        max-height: 105vh;
-        height: auto;
-        width: auto;
-        transform: translate( -45%, 0%);
+
+    /*******************
+        About
+    ******************/
+    #about.section {
+        background: linear-gradient(
+            to bottom,
+            black 0%,
+            black 50%,
+            white 50%,
+            white 100%
+        );
+        flex-direction: column;
     }
 
-    /*****
-        Home page css
-    *****/
-
-    .nav-bar{
+    #about .about-left {
         text-align: center;
-        margin-right: 0px;
-        top: 20px;
     }
 
-    .nav {
-        font-size: 15px;
+    #about p {
+        font-size: 16px;
     }
 
-    #res-btn {
-        margin-right: 0px;
+    #about .about-right {
+        padding-left: 0px;
+        padding-top: 20px;
     }
 
-    #title-name {
-        font-size: 50px;
-        top: 13%;
-    }
-
-    #sub-title {
-        top: 20%;
-    }
-
-    #about {
-        font-size: 18px;
-        color: white;
-        padding-right: 5px;
-        padding-left: 5px;
-        width: auto;
-        top: 45%;
-    }
-
-    .port-links {
-        top: 28%;
-    }
-
-    #sub-title {
-        font-size: 30px;
-    }
-
-    #linkedin {
-        width: 60%;
-    }
-
-    #github {
-        width: 60%;
-    }
-
-    /****
-        Project images, text, wrappers css
-      ****/
-
-    .next-btn.arrow {
-        right: 10px;
-    }
-    
-    .back-btn.arrow {
-        left: 10px;
-    }
-
-    .ranks.example {
-        /* visibility: hidden;  */
-        position: absolute;
-        margin: 0;
-        top: 46%;
-        left: 150%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        box-sizing: border-box;
-    }
-
-    .example {
-        top: 46%;
-        width: '100%';
-        height: 'auto';
-        margin: auto 0;
-    }
-    
-    .open-inventory.example {
-        top: 53%;
-    }
-
-    /*****
-        Project descriptions css
-      ****/
-
-    .description {
-        margin: auto;
-        max-width: 80%;
-    }
-
-    .ranks.description {
-        margin: auto;
-    }
-
-    /*****
-        Wrappers, project images
-      *****/
-
-    .wrapper {
-        display: flex;
+    /*******************
+        Projects
+    ******************/
+    #projects .example-inner {
         flex-direction: column;
         align-items: center;
     }
-    
-    .image-wrapper {
-        margin: auto;
-        padding-bottom: 10px;
-    }
 
-    #ranks-image-wrap {
-        margin-right: 0;
-        margin-left: 0;
-        margin-top: 0px;
-    }
-
-    #ranks-gif {
-        width: 100%;
-        max-height: 250px;
-    }
-
-    .project-image {
-        max-width: 70%;
-    }
-
-    i{
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 8px;
-    }
-    
-    .next-image.arrow {
-        margin-left: 10px;
-    }
-
-    .prev-image.arrow {
-        margin-right: 10px;
-    }
-
-    .project-title{
-        font-size: 25px;
-        margin-bottom: 0px;
-    }
-
-    .project-text{
+    #projects .project-text {
         font-size: 16px;
-        margin-bottom: 0px;
-        margin-top: 5px;
     }
 
-    #project-site {
-        margin-top: 8px;
-        width: 20%;
+    #projects .project-title {
+        font-size: 22px;
     }
 
-    #project-github {
-        width: 30%;
-    }
-
-    #git-link-only {
-        width: 64px;
-        height: 64px;
-        display: block;
-        text-align: center;
-    }
-
-    #project-github-only {
-        width: 64px;
-        height: 64px;
-    }
-
-    #resume-link {
-        font-size: 50px;
+    .section {
+        padding: 60px 20px;
     }
 }

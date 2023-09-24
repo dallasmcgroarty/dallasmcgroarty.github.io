@@ -1,255 +1,292 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142554408-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142554408-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'UA-142554408-1');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content= "user-scalable=no, width=device-width, initial-scale=1.0">
-  <title>Dallas McGroarty</title>
-  <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
-  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav class="nav-bar">
-        <button type="button" class="home-btn nav">Home</button>
-        <button type="button" class="about-btn nav">About</button>
-        <button type="button" class="projects-btn nav">Projects</button>
-        <button type="button" class="resume-btn nav" id="res-btn">Resume</button>
-    </nav>
-    <!-- Home section -->
-    <div id="home">
-        <img src='bg/cool.gif' id="bg-home">
-        <div class="title wrapper">
-            <p id="title-name">Dallas McGroarty</p>
-            <p id="sub-title">Software Developer</p>
-            <nav class="port-links">
-                <a href="https://github.com/dallasmcgroarty" target="_blank" id="git-link"> 
-                    <img src="images/github.png" id="github" style="max-width: 64px; max-height: 64px;">
+        gtag('config', 'UA-142554408-1');
+        </script> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "user-scalable=no, width=device-width, initial-scale=1.0">
+        <title>Dallas McGroarty</title>
+        <link rel="stylesheet" href="styles.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </head>
+    <body>
+        <nav id="nav" class="navbar">
+            <div class="nav-logo flex jcc aic">
+                <span class="nav-logo__text">DM</span>
+            </div>
+            <button type="button" data-scroll-to="#about" class="about-btn navbar-item">About</button>
+            <button type="button" data-scroll-to="#clients" class="projects-btn navbar-item">Clients</button>
+            <button type="button" data-scroll-to="#projects" class="projects-btn navbar-item">Projects</button>
+            <button type="button" data-scroll-to="#resume" class="resume-btn navbar-item" id="res-btn">Resume</button>
+        </nav>
+
+        <div id="about" class="section flex">
+            <div class="about-left flex flex-col flex-50 jcc aic">
+                <p class="about-name">Dallas McGroarty</p>
+                <p class="about-title">Software Developer</p>
+
+                <div class="port-links flex jcc aic">
+                    <a href="https://github.com/dallasmcgroarty" target="_blank" id="git-link"> 
+                        <img src="images/github-48.png" id="github" style="max-width: 64px; max-height: 64px;">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dmcgroarty/" target="_blank" id="in-link">
+                        <img src="images/linkedin-50.png" id="linkedin" style="max-width: 72px; max-height: 72px;">
+                    </a>
+                </div>
+            </div>
+            <div class="about-right flex jcc aic flex-50">
+                <div class="box">
+                    <p>
+                        Hello! My name is Dallas McGroarty and I am a Software Developer. Always hungry to learn and become a better programmer as well as human being. Using my communication skills, creativity, 
+                        and coding ability I hope to be a part of something that truly benefits people.
+                        <br><br>
+                        Currently looking for work and open to new positions as a software developer/engineer, web developer, front-end developer or various IT roles that fit my skill set!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="clients" class="section">
+            <h2 class="heading">
+                Clients worked with
+            </h2>
+
+            <div class="clients-slider">
+                <a class="client-slide flex jcc aic" href="https://amiri.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/amiri-logo.png" width="80"/>
                 </a>
-                <a href="https://www.linkedin.com/in/dmcgroarty/" target="_blank" id="in-link">
-                    <img src="images/linkedin.png" id="linkedin" style="max-width: 72px; max-height: 72px;">
+                <a class="client-slide flex jcc aic" href="https://www.annabeck.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/anna-beck.png" width="220"/>
                 </a>
-            </nav>
-        </div>
-        <div class="about wrapper">
-            <p id="about">Hello! My name is Dallas McGroarty and I am a Web Developer or whatever you call a programmer. Always hungry to learn and become a better programmer as well as human being. Using my communication skills, creativity, 
-                and coding ability I hope to be a part of something that truly benefits people.
-                <br><br>
-                Currently working full-time as a Front End Developer. Open to new positions as a software developer/engineer, web developer, system admin or various IT roles that fit my skill set!
-            </p>
-        </div>
-    </div>
-    <!-- Project section -->
-    <div id="projects">
-        <div class="crop-image">
-            <img src='bg/castle.jpg' id="bg-projects">
-        </div>
-        <button type="button" class="next-btn arrow"><i class="right"></i></button>
-        <button type="button" class="back-btn arrow"><i class="left"></i></button>
-        <!-- Boogle project first to show-->
-        <div class="boogle example">
-            <div class="boogle wrapper">
-                <div class="boogle image-wrapper">
-                    <img src="images/booglegif.gif" id="boogle-image" class="project-image">
-                </div>
-                <div class="boogle description">
-                    <h1 class="project-title" style="text-align: center;">Boogle</h1>
-                    <p class="project-text" style="text-align: center;">
-                        Boogle is a Google search engine clone. Created using a LAMP stack along with Javascript/Jquery.
-                        Users may type a search term into the search bar to find relative websites, images, and news.
-                        Google Maps API allows users to search for locations as well. A PHP web crawler script 
-                        is used to crawl the web for website information and stores it in the MySQL database.
-                    </p>
-                    <a href="https://github.com/dallasmcgroarty/boogle" target="_blank" id="git-link"> 
-                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                    </a>
-                    <a href="https://www.dmdrive.pw/boogle" target="_blank" id="in-link">
-                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                    </a>
-                </div>
+                <a class="client-slide flex jcc aic" href="https://ciaolucia.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/ciao-lucia-logo.png" width="220"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://shopcurrentair.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/current-air-logo.png" width="250"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://www.shopskiesareblue.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/skies-are-blue-logo.png" width="250"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://jasonwustudio.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/jw-logo.svg" width="230"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://www.kristinesshair.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/kristiness-hair.svg" width="180"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://leeadajewelry.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/leeada-logo.png" width="120"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://parrishla.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/parrish-logo.png" width="220"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://pearl.nyc/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/pearl-nyc.png" width="160"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://shoprodarte.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" style="background-color: black;border-radius: 5px;border: 5px solid black;" src="/images/rodarte-logo.png" width="160"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://www.ateliersavas.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" style="background-color: black;border-radius: 5px;border: 5px solid black;" src="/images/savas-logo.png" width="118"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://www.st-roche.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/st-roche-logo.svg"  width="140"/>
+                </a>
+                <a class="client-slide flex jcc aic" href="https://womaness.com/" target="blank" rel="nofollow">
+                    <img class="client-slide__image" src="/images/womaness-logo.svg"  width="235"/>
+                </a>
             </div>
         </div>
-        <!-- GetItDun project -->
-        <div class="getitdun example">
-            <div class="getitdun wrapper">
-                <div class="getitdun image-wrapper">
-                    <img src="images/getitdungif.gif" id="getitdun-image" class="project-image">
-                </div>
-                <div class="getitdun description">
-                    <h1 class="project-title" style="text-align: center;">GetitDun</h1>
-                    <p class="project-text" style="text-align: center;">
-                        GetitDun is a simple and easy to use to-do list creator! Developed using Django, Python, HTML, and Bootstrap. This web app 
-                        allows you to create new to-dos, view current to-dos, view completed to-dos, and update/delete current to-dos. Users must sign-up 
-                        and login in order to start creating their to-dos.
-                    </p>
-                    <a href="https://github.com/dallasmcgroarty/GetitDun" target="_blank" id="git-link"> 
-                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                    </a>
-                    <a href="https://dmcgroarty.pythonanywhere.com/" target="_blank" id="in-link">
-                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- devconnector project -->
-        <div class="devconnector example">
-            <div class="devconnector wrapper">
-                <div class="devconnector image-wrapper">
-                    <button type="button" class="prev-image arrow" id="dev-prev"><i class="left"></i></button>
-                    <img src="images/devconnector1.PNG" id="devconnector-image" class="project-image">
-                    <button type="button" class="next-image arrow" id="dev-next"><i class="right"></i></button>
-                </div>
-                <div class="devconnector description">
-                    <h1 class="project-title" style="text-align: center;">DevConnector</h1>
-                    <p class="project-text" style="text-align: center;">
-                        DevConnector is a social platform for developers to create their own profile, share posts, comment, and connect. 
-                        Created using MongoDB, Express, React and Node.js. Fully deployed on Heroku and available for use!
-                    </p>
-                    <a href="https://github.com/dallasmcgroarty/devconnector" target="_blank" id="git-link"> 
-                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                    </a>
-                    <a href="https://aqueous-ridge-19578.herokuapp.com/" target="_blank" id="in-link">
-                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Ranks project -->
-        <div class="ranks example">
-            <div class="ranks wrapper">
-                <div class="image-wrapper" id="ranks-image-wrap">
-                    <img src="images/ranksgif.gif" id="ranks-gif" class="project-image">
-                </div>
-                <div class="ranks description">
-                    <h1 class="project-title" style="text-align: center;">Ranks</h1>
-                    <p class="project-text" style="text-align: center;">Ranks is a mobile first free score card web app. 
-                        Users can add player cards which contain the player's name and score and dynamically 
-                        update their score through some plus and minus buttons. Developed using HTML, CSS, Bootstrap, and JavaScript.
-                        If on iOS, disable private browsing in order to allow access to local storage.
-                    </p>
-                    <a href="https://github.com/dallasmcgroarty/ranks" target="_blank" id="git-link"> 
-                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                    </a>
-                    <a href="https://ranks.pw" target="_blank" id="in-link">
-                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Face Recognition project-->
-        <div class="face-recognition example">
-            <div class="face-recognition wrapper">
-                <div class="face image-wrapper">
-                    <img src="images/facegif.gif" id="face-recognition-image" class="project-image">
-                </div>
-                <div class="face-recognition description">
-                    <h1 class="project-title" style="text-align: center;">Face Recognition</h1>
-                    <p class="project-text" style="text-align: center;">
-                        Web app created using React, Express, Node.js and PostgreSQL. The app uses the Clarifai API to detect faces in an image.
-                        The server and database are both deployed on Heroku, while the front-end is hosted on github pages. Once signed in or registered,
-                        enter the url of an image in the input space and click detect. The image will be displayed with a box around the face.
-                    </p>
-                    <a href="https://github.com/dallasmcgroarty/FaceRecognition" target="_blank" id="git-link"> 
-                        <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                    </a>
-                    <a href="https://dallasmcgroarty.github.io/FaceRecognition/" target="_blank" id="in-link">
-                        <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Members only project -->
-        <div class="members-only example">
-                <div class="members-only wrapper">
-                    <div class="members image-wrapper">
-                        <button type="button" class="prev-image arrow" id="member-prev"><i class="left"></i></button>
-                        <img src="images/member1.PNG" id="members-only-image" class="project-image">
-                        <button type="button" class="next-image arrow" id="member-next"><i class="right"></i></button>
-                    </div>
-                    <div class="members-only description">
-                        <h1 class="project-title" id="members-only-title" style="text-align: center;">Members Only</h1>
-                        <p class="project-text" style="text-align: center;">
-                                A simple web application using PHP, Apache, MySQL, HTML, CSS, and Bootstrap.
-                
-                                Members Only allows users to securely register and sign in to a site and look at some data in a database.
-                                
-                                Once signed in and authenticated users have some access to the database and can view, add, or delete items in the database.
-                                
-                        </p>
-                        <a href="https://github.com/dallasmcgroarty/MembersOnly" target="_blank" id="git-link"> 
-                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                        </a>
-                        <a href="https://www.dmdrive.pw/membersonly" target="_blank" id="in-link">
-                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- TuffyPub project -->
-            <div class="tuffy-pub example">
-                    <div class="tuffy-pub wrapper">
-                        <div class="tuffy image-wrapper">
-                            <button type="button" class="prev-image arrow" id="tuffy-prev"><i class="left"></i></button>
-                            <img src="images/tuffy1.PNG" id="tuffypub-image" class="project-image">
-                            <button type="button" class="next-image arrow" id="tuffy-next"><i class="right"></i></button>
-                        </div>
-                        <div class="tuffy-pub description">
-                            <h1 class="project-title" style="text-align: center;">Tuffypub</h1>
-                            <p class="project-text" style="text-align: center;">TuffyPub is real-time web-based chat application developed in Angular 7 with Firebase as the database.
-                                    Users can create an account, login and chat with other people in real-time. Users may chat in the global chat room or create their own chat rooms and also have the choice to make them private.
-                            </p>
-                            <a href="https://github.com/dallasmcgroarty/TuffyPub" target="_blank" id="git-link"> 
-                                <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
-                            </a>
-                            <a href="https://tuffypub.firebaseapp.com/" target="_blank" id="in-link">
-                                <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
-                            </a>
+
+        <div id="projects" class="section">
+            <div class="projects-inner">
+                <h2 class="heading">
+                    Projects
+                </h2>
+                <div class="projects-slider">
+                    <!-- Boogle project first to show-->
+                    <div class="boogle example">
+                        <div class="boogle flex jcc example-inner">
+                            <div class="boogle flex jcc aic flex-50">
+                                <img src="images/booglegif.gif" id="boogle-image" class="project-image">
+                            </div>
+                            <div class="boogle description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" style="text-align: center;">Boogle</h1>
+                                    <p class="project-text" style="text-align: center;">
+                                        Boogle is a Google search engine clone. Created using a LAMP stack along with Javascript/Jquery.
+                                        Users may type a search term into the search bar to find relative websites, images, and news.
+                                        Google Maps API allows users to search for locations as well. A PHP web crawler script 
+                                        is used to crawl the web for website information and stores it in the MySQL database.
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/boogle" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github-only" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <!-- <a href="https://www.dmdrive.pw/boogle" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-            </div>
-            <!-- Open Inventory project -->
-            <div class="open-inventory example">
-                <div class="open-inventory wrapper">
-                    <div class="open image-wrapper">
-                        <button type="button" class="prev-image arrow" id="open-prev"><i class="left"></i></button>
-                        <img src="images/open1.png" id="open-inventory-image" class="project-image">
-                        <button type="button" class="next-image arrow" id="open-next"><i class="right"></i></button>
+                    <!-- GetItDun project -->
+                    <div class="getitdun example">
+                        <div class="getitdun flex jcc example-inner">
+                            <div class="getitdun flex jcc aic flex-50">
+                                <img src="images/getitdungif.gif" id="getitdun-image" class="project-image">
+                            </div>
+                            <div class="getitdun description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" style="text-align: center;">GetitDun</h1>
+                                    <p class="project-text" style="text-align: center;">
+                                        GetitDun is a simple and easy to use to-do list creator! Developed using Django, Python, HTML, and Bootstrap. This web app 
+                                        allows you to create new to-dos, view current to-dos, view completed to-dos, and update/delete current to-dos. Users must sign-up 
+                                        and login in order to start creating their to-dos.
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/GetitDun" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <a href="https://dmcgroarty.pythonanywhere.com/" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="open-inventory description">
-                        <h1 class="project-title" style="text-align: center;">Open Inventory</h1>
-                        <p class="project-text" style="text-align: center;">
-                            Open Inventory is a web based inventory system designed to help people/businesses 
-            manage their product inventory. Here, I collaborated with my team while adhering to Agile and Scrum methodologies to develop the front-end site using HTML, and CSS. I also designed the 
-            inventory SQL schema for the database. Go and MongoDB were used for the back-end, database and for user athentication.
-                        </p>
-                        <a href="https://github.com/dallasmcgroarty/open-inventory" target="_blank" id="git-link-only"> 
-                            <img src="images/github.png" id="project-github-only" style="max-width: 64px; max-height: 64px;">
-                        </a>
+                    <!-- devconnector project -->
+                    <div class="devconnector example">
+                        <div class="devconnector flex jcc example-inner">
+                            <div class="devconnector flex jcc aic flex-50">
+                                <img src="images/devconnector1.PNG" id="devconnector-image" class="project-image">
+                            </div>
+                            <div class="devconnector description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" style="text-align: center;">DevConnector</h1>
+                                    <p class="project-text" style="text-align: center;">
+                                        DevConnector is a social platform for developers to create their own profile, share posts, comment, and connect. 
+                                        Created using MongoDB, Express, React and Node.js. Fully deployed on Heroku and available for use!
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/devconnector" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <a href="https://aqueous-ridge-19578.herokuapp.com/" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ranks project -->
+                    <div class="ranks example">
+                        <div class="ranks flex jcc example-inner">
+                            <div class="flex jcc aic flex-50" id="ranks-image-wrap">
+                                <img src="images/ranksgif.gif" id="ranks-gif" class="project-image">
+                            </div>
+                            <div class="ranks description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" style="text-align: center;">Ranks</h1>
+                                    <p class="project-text" style="text-align: center;">Ranks is a mobile first free score card web app. 
+                                        Users can add player cards which contain the player's name and score and dynamically 
+                                        update their score through some plus and minus buttons. Developed using HTML, CSS, Bootstrap, and JavaScript.
+                                        If on iOS, disable private browsing in order to allow access to local storage.
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/ranks" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <a href="https://ranks.pw" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Face Recognition project-->
+                    <div class="face-recognition example">
+                        <div class="face-recognition flex jcc example-inner">
+                            <div class="face flex jcc aic flex-50">
+                                <img src="images/facegif.gif" id="face-recognition-image" class="project-image">
+                            </div>
+                            <div class="face-recognition description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" style="text-align: center;">Face Recognition</h1>
+                                    <p class="project-text" style="text-align: center;">
+                                        Web app created using React, Express, Node.js and PostgreSQL. The app uses the Clarifai API to detect faces in an image.
+                                        The server and database are both deployed on Heroku, while the front-end is hosted on github pages. Once signed in or registered,
+                                        enter the url of an image in the input space and click detect. The image will be displayed with a box around the face.
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/FaceRecognition" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <a href="https://dallasmcgroarty.github.io/FaceRecognition/" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Members only project -->
+                    <div class="members-only example">
+                        <div class="members-only flex jcc example-inner">
+                            <div class="members flex jcc aic flex-50">
+                                <img src="images/member1.PNG" id="members-only-image" class="project-image">
+                            </div>
+                            <div class="members-only description flex flex-col aic jcc">
+                                <div class="desc-inner">
+                                    <h1 class="project-title" id="members-only-title" style="text-align: center;">Members Only</h1>
+                                    <p class="project-text" style="text-align: center;">
+                                            A simple web application using PHP, Apache, MySQL, HTML, CSS, and Bootstrap.
+                            
+                                            Members Only allows users to securely register and sign in to a site and look at some data in a database.
+                                            
+                                            Once signed in and authenticated users have some access to the database and can view, add, or delete items in the database.
+                                            
+                                    </p>
+                                    <div class="project-links flex jcc aic">
+                                        <a href="https://github.com/dallasmcgroarty/MembersOnly" target="_blank" id="git-link"> 
+                                            <img src="images/github.png" id="project-github-only" style="max-width: 64px; max-height: 64px;">
+                                        </a>
+                                        <!-- <a href="https://www.dmdrive.pw/membersonly" target="_blank" id="in-link">
+                                            <img src="images/www.jpg" id="project-site" style="max-width: 46px; max-height: 46px;">
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
-    <!-- Resume section -->
-    <div id="resume">
-        <img src='bg/city1.jpg' id="bg-resume">
-        <div class="resume-wrapper">
-            <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link">Download Resume</a>
         </div>
-    </div>
-    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
-    <script src="main.js"></script>
-</body>
+
+        <!-- Resume section -->
+        <div id="resume" class="section flex jcc aic">
+            <div class="resume-wrapper">
+                <a href="Dallas_McGroarty_Resume.pdf" download id="resume-link">Download Resume</a>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
