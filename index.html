@@ -3,266 +3,474 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dallas McGroarty | Software Engineer</title>
+  <title>Dallas McGroarty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b0f17;
-      --card: rgba(255,255,255,0.06);
-      --text: #e8eefc;
-      --muted: rgba(232,238,252,0.7);
-      --accent: #6ea8fe;
-      --accent2: #8b5cf6;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Inter, sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #111827, var(--bg));
-      color: var(--text);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      background: #0a0a0a;
+      font-weight: 400;
+      color: #eee;
       line-height: 1.6;
-      overflow-x: hidden;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
     }
 
     a {
-      color: var(--accent);
+      color: inherit;
       text-decoration: none;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 120px 0 80px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 700;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .cta {
-      margin-top: 28px;
+    /* HEADER */
+    .header {
       display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 52px;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      flex-shrink: 0;
+      animation: spin 3s linear infinite;
+      animation-play-state: paused;
+    }
+
+    .header:hover .avatar {
+      animation-play-state: running;
+    }
+
+    .header-info {
+      flex: 1;
+      padding-top: 2px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
       gap: 12px;
-      justify-content: center;
       flex-wrap: wrap;
     }
 
-    .btn {
-      padding: 10px 16px;
-      border-radius: 10px;
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--text);
-      transition: 0.2s ease;
-      backdrop-filter: blur(10px);
+    .header h1 {
+      font-size: 36px;
+      line-height: 38px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
+    .header .tagline {
+      font-size: 15px;
+      color: #9d9d9d;
+      margin-top: 7px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      color: #eee;
+      opacity: 0.4;
+      transition: opacity 0.15s;
+    }
+
+    .social-links a:hover {
+      opacity: 1;
+    }
+
+    .social-links img {
+      width: 19px;
+      height: 19px;
+      display: block;
+    }
+
+    .social-links svg {
+      width: 19px;
+      height: 19px;
+      display: block;
+    }
+
+    /* Resume icon: doc icon + hidden down arrow that slides in on hover */
+    .resume-link {
+      position: relative;
+    }
+
+    .resume-icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .dl-arrow {
+      width: 11px !important;
+      height: 11px !important;
+      opacity: 0;
+      transform: translateY(-3px);
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .resume-link:hover .dl-arrow {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* SECTIONS */
     section {
-      padding: 60px 0;
+      margin-bottom: 44px;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #7c7c7c;
       margin-bottom: 16px;
-      color: var(--text);
     }
 
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 20px;
-      margin-top: 12px;
-      backdrop-filter: blur(10px);
+    .prose {
+      font-size: 15px;
+      color: #9d9d9d;
+      line-height: 1.75;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+    .prose + .prose {
+      margin-top: 10px;
+    }
+
+    /* ITEM LIST (projects) */
+    .item-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .item:first-child {
+      border-top: 1px solid #1f1f1f;
+    }
+
+    .item-icon {
+      font-size: 17px;
+      flex-shrink: 0;
+      width: 22px;
+      text-align: center;
+      margin-top: 1px;
+    }
+
+    .item-body {
+      flex: 1;
+    }
+
+    .item-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #eee;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .item-title a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .item-title a:hover .item-name {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .arrow {
+      color: #444;
+      font-size: 13px;
+      transition: transform 0.15s, color 0.15s;
+      display: inline-block;
+    }
+
+    .item:hover .arrow {
+      transform: translateX(3px);
+      color: #777;
+    }
+
+    .item-desc {
+      font-size: 14px;
+      color: #9d9d9d;
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    /* SKILLS */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
     }
 
     .tag {
-      display: inline-block;
+      font-size: 13px;
       padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(110,168,254,0.15);
-      color: var(--accent);
-      font-size: 12px;
-      margin: 4px 4px 0 0;
+      border: 1px solid #222;
+      border-radius: 6px;
+      color: #9d9d9d;
+      background: #111;
+    }
+
+    .tag:hover {
+      border-color: #c0c0c0;
+      color: #c0c0c0;
+    }
+
+    /* EXPERIENCE */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .exp-title {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .exp-date {
+      font-size: 13px;
+      color: #7c7c7c;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: #9d9d9d;
+      margin-top: 2px;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      color: #9d9d9d;
+      margin-top: 6px;
+      line-height: 1.65;
     }
 
     footer {
-      text-align: center;
-      padding: 40px;
-      color: var(--muted);
-      font-size: 14px;
+      margin-top: 64px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 40px 20px 80px;
+      }
+      .exp-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <!-- HEADER -->
+  <div class="header">
+    <img class="avatar" src="images/me.jpg" alt="Dallas McGroarty" />
+    <div class="header-info">
+      <div class="header-top">
+        <h1>Dallas McGroarty</h1>
+        <div class="social-links">
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>Dallas McGroarty</h1>
-      <p>Software Engineer focused on building full-stack applications and AI-powered products.</p>
+          <!-- GitHub -->
+          <a href="https://github.com/dallasmcgroarty" target="_blank" title="GitHub">
+            <img src="images/github-48.png" alt="GitHub" />
+          </a>
 
-      <div class="cta">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn" href="Dallas McGroarty Resume.pdf" download id="resume-link">Download Resume</a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/dmcgroarty/" target="_blank" title="LinkedIn">
+            <img src="images/linkedin-50.png" alt="LinkedIn" />
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:dallas.mcgroarty@gmail.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </a>
+
+          <!-- Resume (PDF icon + animated down arrow on hover) -->
+          <a href="Dallas McGroarty Resume.pdf" download title="Download Resume" class="resume-link">
+            <div class="resume-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <polyline points="9 15 12 18 15 15"/>
+              </svg>
+              <svg class="dl-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+          </a>
+
+        </div>
       </div>
+      <p class="tagline">Software engineer building full-stack apps and AI-powered products.</p>
     </div>
-
-    <!-- ABOUT -->
-    <section>
-      <h2>About</h2>
-      <div class="card">
-        I’m a full-stack software engineer with experience building frontend-heavy web applications, backend systems, and integrating AI features into real-world products. I enjoy shipping clean, performant software and working on products that solve meaningful problems.
-        <br><br>
-        I’m especially interested in applied AI, developer tools, and product-driven engineering teams.
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <div class="card">
-        <span class="tag">HTML / CSS</span>
-        <span class="tag">JavaScript / TypeScript</span>
-        <span class="tag">React.js</span>
-        <span class="tag">Vue.js</span>
-        <span class="tag">Next.js</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Python</span>
-        <span class="tag">REST APIs</span>
-        <span class="tag">SQL</span>
-        <span class="tag">NoSQL</span>
-        <span class="tag">AWS / Cloud Basics</span>
-        <span class="tag">AI / LLM Integration</span>
-        <span class="tag">CMS Integration</span>
-        <span class="tag">DAM Integration</span>
-        <span class="tag">Systems Design</span>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>AI-Powered Tool (Example)</strong>
-          <p style="color: var(--muted); margin-top: 8px;">A full-stack application integrating LLM APIs to automate workflows and generate insights.</p>
-        </div>
-
-        <div class="card">
-          <strong>Frontend Dashboard</strong>
-          <p style="color: var(--muted); margin-top: 8px;">Responsive analytics dashboard built with React and modern UI patterns.</p>
-        </div>
-
-        <div class="card">
-          <strong>Full-Stack Web App</strong>
-          <p style="color: var(--muted); margin-top: 8px;">Scalable CRUD application with authentication, database, and API layer.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <h2>Experience</h2>
-    
-      <div class="card">
-        <strong>Web Developer</strong> — gateB
-        <br>
-        <span style="color: var(--muted);">Aug 2024 – Present · Los Angeles County, CA (Hybrid)</span>
-        <p style="margin-top: 8px; color: var(--muted);">
-          Build and maintain frontend features for client-facing applications, focusing on performance, UI consistency, and scalable component architecture. Collaborate with cross-functional teams to ship production features in fast-paced agile cycles.
-        </p>
-      </div>
-    
-      <div class="card">
-        <strong>Frontend Developer</strong> — ECOM DEPARTMENT
-        <br>
-        <span style="color: var(--muted);">Jan 2022 – May 2023</span>
-        <p style="margin-top: 8px; color: var(--muted);">
-          Developed and optimized Shopify-based e-commerce storefronts across 30+ brands. Improved page performance and conversion-focused UX through modern frontend tooling and third-party integrations. Supported ongoing maintenance, feature development, and Agile workflow coordination.
-        </p>
-      </div>
-    
-      <div class="card">
-        <strong>Full Stack Engineer</strong> — Direct Edge Media
-        <br>
-        <span style="color: var(--muted);">Nov 2020 – Dec 2021</span>
-        <p style="margin-top: 8px; color: var(--muted);">
-          Built and extended backend systems using PHP (OOP) within an MVC architecture, including reporting tools and platform extensions. Led migration efforts from legacy systems to a modern stack, improving performance by ~30%. Designed SQL schemas and wrote optimized queries for data access and reporting.
-        </p>
-      </div>
-    
-      <div class="card">
-        <strong>Application Developer</strong> — Postremo
-        <br>
-        <span style="color: var(--muted);">Sep 2019 – Jan 2020</span>
-        <p style="margin-top: 8px; color: var(--muted);">
-          Developed an Android application integrating RFID scanner hardware (Denso SP1). Assisted in setting up Raspberry Pi-based POS systems and contributed to internal tooling, customer support, and operational workflows.
-        </p>
-      </div>
-    
-      <div class="card">
-        <strong>Sales Associate</strong> — Jack's Surfboards
-        <br>
-        <span style="color: var(--muted);">Jun 2015 – Oct 2019</span>
-        <p style="margin-top: 8px; color: var(--muted);">
-          Delivered customer-facing retail support, strengthening communication, sales intuition, and problem-solving skills in a high-traffic retail environment.
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:dallas.mcgroarty@gmail.com">dallas.mcgroarty@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/dmcgroarty/" target="_blank">View Profile</a></p>
-        <p>GitHub: <a href="https://github.com/dallasmcgroarty" target="_blank">dallasmcgroarty</a></p>
-      </div>
-    </section>
-
-    <footer>
-      © 2026 Dallas McGroarty
-    </footer>
-
   </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About</h2>
+    <p class="prose">
+      Full-stack engineer with a focus on frontend-heavy web apps, backend systems, and AI integrations. I care about shipping clean, performant software on teams that move fast and solve real problems.
+    </p>
+    <p class="prose">
+      Especially interested in applied AI, developer tools, and product-driven engineering.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="item-list">
+
+      <div class="item">
+        <div class="item-body">
+          <div class="item-title">
+            <span class="item-name">AI-Powered Tool</span>
+            <span class="arrow">→</span>
+          </div>
+          <div class="item-desc">Full-stack app integrating LLM APIs to automate workflows and generate insights.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-body">
+          <div class="item-title">
+            <span class="item-name">Frontend Dashboard</span>
+            <span class="arrow">→</span>
+          </div>
+          <div class="item-desc">Responsive analytics dashboard built with React and modern UI patterns.</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-body">
+          <div class="item-title">
+            <span class="item-name">Full-Stack Web App</span>
+            <span class="arrow">→</span>
+          </div>
+          <div class="item-desc">Scalable CRUD app with authentication, a database layer, and REST API.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="tags">
+      <span class="tag">React.js</span>
+      <span class="tag">Vue.js</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Python</span>
+      <span class="tag">REST APIs</span>
+      <span class="tag">SQL</span>
+      <span class="tag">NoSQL</span>
+      <span class="tag">AWS</span>
+      <span class="tag">AI / LLM Integration</span>
+      <span class="tag">CMS Integration</span>
+      <span class="tag">DAM Integration</span>
+      <span class="tag">Systems Design</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
+    <div class="exp-list">
+
+      <div>
+        <div class="exp-header">
+          <div class="exp-title">Web Developer</div>
+          <div class="exp-date">Aug 2024 – Present</div>
+        </div>
+        <div class="exp-company">gateB · Los Angeles, CA (Hybrid)</div>
+        <div class="exp-desc">Build and maintain frontend features for client-facing applications, focusing on performance, UI consistency, and scalable component architecture. Ship production features in fast-paced agile cycles.</div>
+      </div>
+
+      <div>
+        <div class="exp-header">
+          <div class="exp-title">Frontend Developer</div>
+          <div class="exp-date">Jan 2022 – May 2023</div>
+        </div>
+        <div class="exp-company">ECOM DEPARTMENT</div>
+        <div class="exp-desc">Developed and optimized Shopify storefronts across 30+ brands. Improved page performance and conversion-focused UX through modern frontend tooling and third-party integrations.</div>
+      </div>
+
+      <div>
+        <div class="exp-header">
+          <div class="exp-title">Full Stack Engineer</div>
+          <div class="exp-date">Nov 2020 – Dec 2021</div>
+        </div>
+        <div class="exp-company">Direct Edge Media</div>
+        <div class="exp-desc">Built backend systems in PHP (OOP/MVC), including reporting tools and platform extensions. Led a legacy-to-modern migration that improved performance by ~30%. Designed SQL schemas and optimized data access queries.</div>
+      </div>
+
+      <div>
+        <div class="exp-header">
+          <div class="exp-title">Application Developer</div>
+          <div class="exp-date">Sep 2019 – Jan 2020</div>
+        </div>
+        <div class="exp-company">Postremo</div>
+        <div class="exp-desc">Developed an Android app integrating RFID scanner hardware (Denso SP1). Assisted with Raspberry Pi-based POS systems and contributed to internal tooling.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>© 2026 Dallas McGroarty</footer>
 
 </body>
 </html>
