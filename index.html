@@ -305,6 +305,151 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+
+    /* GALLERY PREVIEW */
+    .gallery-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .gallery-preview-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+      display: block;
+    }
+
+    .gallery-preview-grid img:hover {
+      opacity: 1;
+    }
+
+    .gallery-view-all {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #9d9d9d;
+      transition: color 0.15s;
+      cursor: pointer;
+    }
+
+    .gallery-view-all:hover {
+      color: #eee;
+    }
+
+    /* GALLERY MODAL */
+    .gallery-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.96);
+      z-index: 1000;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .gallery-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .gallery-modal-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    .gallery-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .gallery-modal-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #555;
+    }
+
+    .gallery-close {
+      background: none;
+      border: none;
+      color: #9d9d9d;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0;
+      transition: color 0.15s;
+    }
+
+    .gallery-close:hover {
+      color: #eee;
+    }
+
+    /* CSS columns = true masonry */
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 8px;
+    }
+
+    .gallery-masonry img {
+      width: 100%;
+      display: block;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      break-inside: avoid;
+      cursor: zoom-in;
+      opacity: 0.9;
+      transition: opacity 0.15s;
+    }
+
+    .gallery-masonry img:hover {
+      opacity: 1;
+    }
+
+    /* Lightbox (single image expand) */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      cursor: zoom-out;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .gallery-masonry {
+        columns: 2;
+      }
+    }
   </style>
 </head>
 <body>
@@ -365,6 +510,13 @@
     <p class="prose">
       Especially interested in applied AI, developer tools, and product-driven engineering.
     </p>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <h2>Random images I like</h2>
+    <div class="gallery-preview-grid" id="gallery-preview"></div>
+    <a class="gallery-view-all" id="gallery-open">view all →</a>
   </section>
 
   <!-- PROJECTS -->
@@ -471,6 +623,98 @@
   </section>
 
   <footer>© 2026 Dallas McGroarty</footer>
+
+  <!-- GALLERY MODAL -->
+  <div class="gallery-overlay" id="gallery-overlay">
+    <div class="gallery-modal-inner">
+      <div class="gallery-modal-header">
+        <span class="gallery-modal-title">Random images I like</span>
+        <button class="gallery-close" id="gallery-close">✕</button>
+      </div>
+      <div class="gallery-masonry" id="gallery-masonry"></div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    // ─── Add or remove image paths here ───────────────────────────────────────
+    const GALLERY_IMAGES = [
+      'images/random/1765412883465~2.jpg',
+      'images/random/1_OYms1W-dJ6Y5P8ceJmPVSw@2x.jpeg',
+      'images/random/20250712_080221.jpg',
+      'images/random/IMG_20250816_102541_851.webp',
+      'images/random/IMG_20250827_203509_934.jpg',
+      'images/random/IMG_20251018_175813_361.jpg',
+      'images/random/Screenshot_20250809-141555.png',
+      'images/random/Screenshot_20250809-141629.png',
+      'images/random/Snapchat-778049180.jpg',
+      'images/random/boagvs.jpg',
+      'images/random/tqhb7qupcs9a1.jpg',
+    ];
+    // ──────────────────────────────────────────────────────────────────────────
+
+    const PREVIEW_COUNT = 4;
+
+    const overlay  = document.getElementById('gallery-overlay');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg    = document.getElementById('lightbox-img');
+
+    function openGallery() {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openLightbox(src) {
+      lbImg.src = src;
+      lightbox.classList.add('open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lbImg.src = '';
+    }
+
+    // Populate preview (first N images)
+    const previewEl = document.getElementById('gallery-preview');
+    GALLERY_IMAGES.slice(0, PREVIEW_COUNT).forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.addEventListener('click', openGallery);
+      previewEl.appendChild(img);
+    });
+
+    // Populate masonry modal (all images)
+    const masonryEl = document.getElementById('gallery-masonry');
+    GALLERY_IMAGES.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.addEventListener('click', () => openLightbox(src));
+      masonryEl.appendChild(img);
+    });
+
+    // Controls
+    document.getElementById('gallery-open').addEventListener('click', openGallery);
+    document.getElementById('gallery-close').addEventListener('click', closeGallery);
+
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeGallery(); });
+    lightbox.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        if (lightbox.classList.contains('open')) closeLightbox();
+        else closeGallery();
+      }
+    });
+  </script>
 
 </body>
 </html>
